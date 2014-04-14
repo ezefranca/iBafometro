@@ -61,6 +61,12 @@
 		F7AF818918FA2E470078C410 /* unhealthy.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AF818818FA2E470078C410 /* unhealthy.png */; };
 		F7AF818B18FA325C0078C410 /* cabeca.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AF818A18FA325C0078C410 /* cabeca.png */; };
 		F7AF818E18FA36E90078C410 /* MainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AF818D18FA36E90078C410 /* MainTabViewController.m */; };
+		F7AF819018FB82610078C410 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7AF818F18FB82610078C410 /* Localizable.strings */; };
+		F7AF819218FB86A20078C410 /* Mussum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7AF819118FB86A20078C410 /* Mussum.jpg */; };
+		F7AF819418FB88370078C410 /* dologo.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AF819318FB88370078C410 /* dologo.png */; };
+		F7AF81E518FB8A790078C410 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AF81E118FB8A790078C410 /* MyScene.m */; };
+		F7AF81E618FB8A790078C410 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AF81E218FB8A790078C410 /* Spaceship.png */; };
+		F7AF81E718FB8A790078C410 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AF81E418FB8A790078C410 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +170,14 @@
 		F7AF818A18FA325C0078C410 /* cabeca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cabeca.png; sourceTree = "<group>"; };
 		F7AF818C18FA36E90078C410 /* MainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabViewController.h; sourceTree = "<group>"; };
 		F7AF818D18FA36E90078C410 /* MainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabViewController.m; sourceTree = "<group>"; };
+		F7AF818F18FB82610078C410 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		F7AF819118FB86A20078C410 /* Mussum.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mussum.jpg; sourceTree = "<group>"; };
+		F7AF819318FB88370078C410 /* dologo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dologo.png; sourceTree = "<group>"; };
+		F7AF81E018FB8A790078C410 /* MyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyScene.h; path = "../../../../../Documents/Estudo iOS/ios-extra-study/teste-sk/teste-sk/MyScene.h"; sourceTree = "<group>"; };
+		F7AF81E118FB8A790078C410 /* MyScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyScene.m; path = "../../../../../Documents/Estudo iOS/ios-extra-study/teste-sk/teste-sk/MyScene.m"; sourceTree = "<group>"; };
+		F7AF81E218FB8A790078C410 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Spaceship.png; path = "../../../../../Documents/Estudo iOS/ios-extra-study/teste-sk/teste-sk/Spaceship.png"; sourceTree = "<group>"; };
+		F7AF81E318FB8A790078C410 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "../../../../../Documents/Estudo iOS/ios-extra-study/teste-sk/teste-sk/ViewController.h"; sourceTree = "<group>"; };
+		F7AF81E418FB8A790078C410 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "../../../../../Documents/Estudo iOS/ios-extra-study/teste-sk/teste-sk/ViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +254,11 @@
 			children = (
 				F7A5665418F8BB6F00B5B20A /* Dependencies */,
 				F70D6E9F18F8A99000238937 /* Main_iPhone.storyboard */,
+				F7AF81E018FB8A790078C410 /* MyScene.h */,
+				F7AF81E118FB8A790078C410 /* MyScene.m */,
+				F7AF81E218FB8A790078C410 /* Spaceship.png */,
+				F7AF81E318FB8A790078C410 /* ViewController.h */,
+				F7AF81E418FB8A790078C410 /* ViewController.m */,
 				F70D6E9C18F8A99000238937 /* AppDelegate.h */,
 				F70D6E9D18F8A99000238937 /* AppDelegate.m */,
 				F7A3D7B518F8EEF1002A1E56 /* SettingsViewController.h */,
@@ -269,6 +288,7 @@
 				F7AF809318F9A8BB0078C410 /* Imagens */,
 				F70D6E9518F8A99000238937 /* iBafometro-Info.plist */,
 				F70D6E9618F8A99000238937 /* InfoPlist.strings */,
+				F7AF818F18FB82610078C410 /* Localizable.strings */,
 				F70D6E9918F8A99000238937 /* main.m */,
 				F70D6E9B18F8A99000238937 /* iBafometro-Prefix.pch */,
 			);
@@ -316,6 +336,8 @@
 		F7AF809318F9A8BB0078C410 /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				F7AF819318FB88370078C410 /* dologo.png */,
+				F7AF819118FB86A20078C410 /* Mussum.jpg */,
 				F7AF818A18FA325C0078C410 /* cabeca.png */,
 				F7AF813D18F9F6010078C410 /* icones */,
 				F7AF809418F9A8BB0078C410 /* 14169905_s.jpg */,
@@ -467,14 +489,18 @@
 			files = (
 				F7AF814718F9F6010078C410 /* map32.png in Resources */,
 				F70D6EA418F8A99000238937 /* Main_iPad.storyboard in Resources */,
+				F7AF819418FB88370078C410 /* dologo.png in Resources */,
 				F7AF814918F9F6010078C410 /* tools.png in Resources */,
+				F7AF819218FB86A20078C410 /* Mussum.jpg in Resources */,
 				F7AF814618F9F6010078C410 /* hands-shake.png in Resources */,
 				F7AF814818F9F6010078C410 /* taxi1.png in Resources */,
 				F70D6EAC18F8A99000238937 /* Images.xcassets in Resources */,
 				F7AF809518F9A8BB0078C410 /* 14169905_s.jpg in Resources */,
 				F70D6EA118F8A99000238937 /* Main_iPhone.storyboard in Resources */,
+				F7AF81E618FB8A790078C410 /* Spaceship.png in Resources */,
 				F7AF814518F9F6010078C410 /* facebook24.png in Resources */,
 				F7AF814B18FA018B0078C410 /* rsz_map32.png in Resources */,
+				F7AF819018FB82610078C410 /* Localizable.strings in Resources */,
 				F7AF818B18FA325C0078C410 /* cabeca.png in Resources */,
 				F70D6E9818F8A99000238937 /* InfoPlist.strings in Resources */,
 				F7AF818918FA2E470078C410 /* unhealthy.png in Resources */,
@@ -506,9 +532,11 @@
 				F7A5666B18F8BB6F00B5B20A /* NSString+HexColor.m in Sources */,
 				F70D6ECA18F8A9F400238937 /* MapaViewController.m in Sources */,
 				F7AF818518FA2A4D0078C410 /* FSKRecognizer.mm in Sources */,
+				F7AF81E718FB8A790078C410 /* ViewController.m in Sources */,
 				F7AF818318FA2A4D0078C410 /* AudioSignalAnalyzer.m in Sources */,
 				F7AF818418FA2A4D0078C410 /* AudioSignalGenerator.m in Sources */,
 				F7AF818718FA2A4D0078C410 /* MultiDelegate.m in Sources */,
+				F7AF81E518FB8A790078C410 /* MyScene.m in Sources */,
 				F7AF816C18FA264E0078C410 /* PNLineChartDataItem.m in Sources */,
 				F70D6E9E18F8A99000238937 /* AppDelegate.m in Sources */,
 				F7AF816918FA264E0078C410 /* PNColor.m in Sources */,

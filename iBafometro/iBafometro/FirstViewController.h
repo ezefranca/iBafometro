@@ -10,5 +10,6 @@
 #import <FacebookSDK/FacebookSDK.h>
 
 @interface FirstViewController : UIViewController <FBLoginViewDelegate, UITabBarControllerDelegate, UINavigationControllerDelegate>
+@property (strong, nonatomic) IBOutlet UIButton *facebuquis;
 
 @end

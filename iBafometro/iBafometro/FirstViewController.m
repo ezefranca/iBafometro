@@ -19,6 +19,12 @@
     [super viewDidLoad];
     	// Do any additional setup after loading the view, typically from a nib.
     //[[self tabBar] setSelectedImageTintColor:[UIColor greenColor]];
+    CGRect x = self.facebuquis.bounds;
+    self.facebuquis.layer.cornerRadius = 5;
+    self.facebuquis.layer.borderWidth = 1.0f;
+    self.facebuquis.layer.borderColor = [UIColor clearColor].CGColor;
+    self.facebuquis.clipsToBounds = YES;
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -9,6 +9,7 @@
 #import "SecondViewController.h"
 #import "AppDelegate.h"
 #import "PNChart.h"
+#import "MyScene.h"
 
 @interface NSString (NSStringHexToBytes)
 -(NSData*) hexToBytes ;
@@ -50,7 +51,7 @@
     [circleChart strokeChart];
     
     [self.view addSubview:circleChart];
-    self.title = @"iMonitor Ruido";
+    //self.title = @"iMonitor Ruido";
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,6 +76,19 @@
     
 	[APP_DELEGATE->_generator writeByte:0xff];
     [APP_DELEGATE->_generator writeBytes:[hexData bytes] length:hexData.length];
+    
+    
+//    // Configure the view.
+//    SKView * skView = (SKView *)self.view;
+//    skView.showsFPS = YES;
+//    skView.showsNodeCount = YES;
+//    
+//    // Create and configure the scene.
+//    SKScene * scene = [MyScene sceneWithSize:skView.bounds.size];
+//    scene.scaleMode = SKSceneScaleModeAspectFill;
+//    
+//    // Present the scene.
+//    [skView presentScene:scene];
 }
 
 -(void)userClickedOnLineKeyPoint:(CGPoint)point lineIndex:(NSInteger)lineIndex andPointIndex:(NSInteger)pointIndex{
