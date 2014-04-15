@@ -14,7 +14,7 @@
                     <size key="freeformSize" width="320" height="560"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="LZb-uh-GFZ">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" patternImage="C7B72A41-4296-46A9-83C6-8D87102CDB35" colorSpace="pattern"/>
+                        <color key="backgroundColor" patternImage="C87858B8-1EFA-4B52-A249-1369D81C4512" colorSpace="pattern"/>
                         <color key="barTintColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -27,7 +27,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9d-er-r9H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1068" y="-2479"/>
+            <point key="canvasLocation" x="-2108" y="-1143"/>
         </scene>
         <!--First View Controller - First-->
         <scene sceneID="W3I-pn-N6e">
@@ -41,7 +41,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView alpha="0.5" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mussum.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Tea-vA-GQH">
+                            <imageView alpha="0.5" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cabeca.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tea-vA-GQH">
                                 <rect key="frame" x="0.0" y="-59" width="320" height="573"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -75,7 +75,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="RsY-eB-SPV"/>
             </objects>
-            <point key="canvasLocation" x="-327" y="-2479"/>
+            <point key="canvasLocation" x="-1367" y="-1143"/>
         </scene>
         <!--Social View Controller - Social-->
         <scene sceneID="2e6-3G-KmB">
@@ -192,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wFr-XW-qb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298" y="-2479"/>
+            <point key="canvasLocation" x="-742" y="-1143"/>
         </scene>
         <!--Settings View Controller - Configuris-->
         <scene sceneID="4MA-N6-LeE">
@@ -217,31 +217,57 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="numero do seu taxista" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jbv-bS-4Xg">
-                                <rect key="frame" x="116" y="66" width="182" height="30"/>
+                                <rect key="frame" x="65" y="120" width="233" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="If9-mJ-UWJ">
-                                <rect key="frame" x="116" y="121" width="182" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="If9-mJ-UWJ">
+                                <rect key="frame" x="65" y="70" width="233" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sqc-7p-xfS">
-                                <rect key="frame" x="116" y="173" width="182" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amigo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sqc-7p-xfS">
+                                <rect key="frame" x="65" y="173" width="233" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KcD-Je-xiW">
-                                <rect key="frame" x="116" y="262" width="51" height="31"/>
+                                <rect key="frame" x="65" y="313" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oMi-XZ-BYF">
-                                <rect key="frame" x="114" y="224" width="186" height="31"/>
+                                <rect key="frame" x="63" y="275" width="237" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef6-WG-oQC">
+                                <rect key="frame" x="68" y="373" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Salvar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="botaoSalvar:" destination="LIi-Wv-EY8" eventType="touchUpInside" id="u8E-ci-XGf"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Endereco de casa" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DJa-i2-hOU">
+                                <rect key="frame" x="65" y="225" width="233" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ve3-cy-b2J">
+                                <rect key="frame" x="170" y="373" width="128" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Consultar dados">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="botaoConsulta:" destination="LIi-Wv-EY8" eventType="touchUpInside" id="uOx-kO-czO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1019607843" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -251,10 +277,16 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <size key="freeformSize" width="320" height="560"/>
+                    <connections>
+                        <outlet property="labelAmigo" destination="sqc-7p-xfS" id="6yM-fm-iUE"/>
+                        <outlet property="labelEndereco" destination="DJa-i2-hOU" id="TR2-rA-5Ei"/>
+                        <outlet property="labelNome" destination="If9-mJ-UWJ" id="jfy-xL-qdQ"/>
+                        <outlet property="labelTaxista" destination="Jbv-bS-4Xg" id="2NO-aa-ZA7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vqv-LL-1AO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="317" y="-1636"/>
+            <point key="canvasLocation" x="-723" y="-300"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gs4-xs-d8P">
@@ -286,7 +318,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RL2-G7-SkI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="-882"/>
+            <point key="canvasLocation" x="-71" y="454"/>
         </scene>
         <!--Navigation Controller - Localizar-->
         <scene sceneID="dLt-cq-UcA">
@@ -305,7 +337,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgf-jN-AYw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1096" y="121"/>
+            <point key="canvasLocation" x="-2136" y="1457"/>
         </scene>
         <!--Mapa View Controller - Mapis-->
         <scene sceneID="DlH-Ki-2KD">
@@ -377,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLS-fN-IkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-415" y="773"/>
+            <point key="canvasLocation" x="-1455" y="2109"/>
         </scene>
         <!--Onibus View Controller - Onibis-->
         <scene sceneID="Lej-Zf-Aht">
@@ -407,7 +439,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EU0-ZH-nwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="324" y="-28"/>
+            <point key="canvasLocation" x="-716" y="1308"/>
         </scene>
         <!--View Controller - Taquis-->
         <scene sceneID="aCp-1R-2WJ">
@@ -430,7 +462,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBd-Tz-Qb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="324" y="773"/>
+            <point key="canvasLocation" x="-716" y="2109"/>
         </scene>
         <!--View Controller - Amiguis-->
         <scene sceneID="K1z-zD-eXW">
@@ -453,7 +485,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLZ-WE-lLb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="324" y="1534"/>
+            <point key="canvasLocation" x="-716" y="2870"/>
         </scene>
         <!--Second View Controller - Second-->
         <scene sceneID="ot8-2e-RuS">
@@ -484,12 +516,14 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Medir" id="Z7h-1E-pvt"/>
-                    <navigationItem key="navigationItem" id="djB-hQ-Vno"/>
+                    <navigationItem key="navigationItem" title="Bafometris" id="djB-hQ-Vno">
+                        <barButtonItem key="backBarButtonItem" title="Voltis" id="Q7g-Zw-NeO"/>
+                    </navigationItem>
                     <size key="freeformSize" width="320" height="560"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="324" y="-882"/>
+            <point key="canvasLocation" x="-716" y="454"/>
         </scene>
         <!--Main Tab View Controller-->
         <scene sceneID="Vex-rW-GRa">
@@ -517,7 +551,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3065" y="-1550"/>
+            <point key="canvasLocation" x="-4105" y="-214"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UTg-if-58B">
@@ -528,7 +562,7 @@
                     <size key="freeformSize" width="320" height="560"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="wkp-fY-6VB">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" patternImage="88EF46A9-70C3-43E8-81C0-579B256587C5" colorSpace="pattern"/>
+                        <color key="backgroundColor" patternImage="EC8A0A20-D30C-4E25-B840-D1E1B11CE3D2" colorSpace="pattern"/>
                         <color key="barTintColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -541,7 +575,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhb-Dt-QxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1096" y="-1636"/>
+            <point key="canvasLocation" x="-2136" y="-300"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NGD-cS-LqG">
@@ -552,7 +586,7 @@
                     <size key="freeformSize" width="320" height="560"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="bbf-FC-YqP">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" patternImage="042CA5A8-0755-4C25-AB4C-869F42692246" colorSpace="pattern"/>
+                        <color key="backgroundColor" patternImage="A6721B25-6CCD-42B9-B0A0-28A85BAAF6A2" colorSpace="pattern"/>
                         <color key="barTintColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -565,11 +599,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0JP-XC-L5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1096" y="-855"/>
+            <point key="canvasLocation" x="-2136" y="481"/>
         </scene>
     </scenes>
     <resources>
-        <image name="042CA5A8-0755-4C25-AB4C-869F42692246" width="320" height="460">
+        <image name="A6721B25-6CCD-42B9-B0A0-28A85BAAF6A2" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -10456,7 +10490,7 @@ CQq/AAkKxAAJCswACQrPAAkK1AAJCtwACQrfAAkK8QAJCvQACQr5AAAAAAAABAEAAAAAAAAAQgAAAAAA
 AAAAAAAAAAAJCvs
 </mutableData>
         </image>
-        <image name="88EF46A9-70C3-43E8-81C0-579B256587C5" width="320" height="460">
+        <image name="C87858B8-1EFA-4B52-A249-1369D81C4512" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -20343,7 +20377,7 @@ CQq/AAkKxAAJCswACQrPAAkK1AAJCtwACQrfAAkK8QAJCvQACQr5AAAAAAAABAEAAAAAAAAAQgAAAAAA
 AAAAAAAAAAAJCvs
 </mutableData>
         </image>
-        <image name="C7B72A41-4296-46A9-83C6-8D87102CDB35" width="320" height="460">
+        <image name="EC8A0A20-D30C-4E25-B840-D1E1B11CE3D2" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -30230,8 +30264,8 @@ CQq/AAkKxAAJCswACQrPAAkK1AAJCtwACQrfAAkK8QAJCvQACQr5AAAAAAAABAEAAAAAAAAAQgAAAAAA
 AAAAAAAAAAAJCvs
 </mutableData>
         </image>
-        <image name="Mussum.jpg" width="905" height="905"/>
         <image name="bus25.png" width="512" height="512"/>
+        <image name="cabeca.png" width="342" height="401"/>
         <image name="dologo.png" width="230" height="66"/>
         <image name="hands-shake.png" width="512" height="512"/>
         <image name="taxi1.png" width="512" height="512"/>

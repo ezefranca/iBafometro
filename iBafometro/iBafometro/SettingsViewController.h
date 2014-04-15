@@ -8,6 +8,13 @@
 
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface SettingsViewController : FBUserSettingsViewController
+@interface SettingsViewController : FBUserSettingsViewController <UIApplicationDelegate>
+- (IBAction)botaoSalvar:(id)sender;
+- (IBAction)botaoConsulta:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UITextField *labelNome;
+@property (weak, nonatomic) IBOutlet UITextField *labelTaxista;
+@property (weak, nonatomic) IBOutlet UITextField *labelAmigo;
+@property (weak, nonatomic) IBOutlet UITextField *labelEndereco;
 
 @end

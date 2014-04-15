@@ -12,6 +12,9 @@
 		2542461A18FC514D0069E394 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2542461718FC514D0069E394 /* ViewController.m */; };
 		2542461C18FC51880069E394 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2542461B18FC51880069E394 /* FacebookSDK.framework */; };
 		2542461F18FC63D30069E394 /* TabBarCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 2542461E18FC63D30069E394 /* TabBarCustom.m */; };
+		2574CBA818FDA52400DF2254 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2574CBA718FDA52400DF2254 /* CoreData.framework */; };
+		2574CBAB18FDA58C00DF2254 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2574CBA918FDA58C00DF2254 /* Model.xcdatamodeld */; };
+		2574CBAE18FDB35100DF2254 /* DadosPessoais.m in Sources */ = {isa = PBXBuildFile; fileRef = 2574CBAD18FDB35100DF2254 /* DadosPessoais.m */; };
 		F70D6E8E18F8A99000238937 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70D6E8D18F8A99000238937 /* Foundation.framework */; };
 		F70D6E9018F8A99000238937 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70D6E8F18F8A99000238937 /* CoreGraphics.framework */; };
 		F70D6E9218F8A99000238937 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70D6E9118F8A99000238937 /* UIKit.framework */; };
@@ -89,6 +92,10 @@
 		2542461B18FC51880069E394 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		2542461D18FC63D30069E394 /* TabBarCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarCustom.h; sourceTree = "<group>"; };
 		2542461E18FC63D30069E394 /* TabBarCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarCustom.m; sourceTree = "<group>"; };
+		2574CBA718FDA52400DF2254 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2574CBAA18FDA58C00DF2254 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		2574CBAC18FDB35100DF2254 /* DadosPessoais.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DadosPessoais.h; sourceTree = "<group>"; };
+		2574CBAD18FDB35100DF2254 /* DadosPessoais.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DadosPessoais.m; sourceTree = "<group>"; };
 		F70D6E8A18F8A99000238937 /* iBafometro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBafometro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70D6E8D18F8A99000238937 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F70D6E8F18F8A99000238937 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -189,6 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2574CBA818FDA52400DF2254 /* CoreData.framework in Frameworks */,
 				2542461C18FC51880069E394 /* FacebookSDK.framework in Frameworks */,
 				F70D6E9018F8A99000238937 /* CoreGraphics.framework in Frameworks */,
 				F7AF816F18FA27C80078C410 /* QuartzCore.framework in Frameworks */,
@@ -237,6 +245,7 @@
 		F70D6E8C18F8A99000238937 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2574CBA718FDA52400DF2254 /* CoreData.framework */,
 				2542461B18FC51880069E394 /* FacebookSDK.framework */,
 				F7AF816E18FA27C80078C410 /* QuartzCore.framework */,
 				F7AF810C18F9DDA10078C410 /* Social.framework */,
@@ -259,12 +268,12 @@
 			children = (
 				F7A5665418F8BB6F00B5B20A /* Dependencies */,
 				F70D6E9F18F8A99000238937 /* Main_iPhone.storyboard */,
+				F70D6E9C18F8A99000238937 /* AppDelegate.h */,
+				F70D6E9D18F8A99000238937 /* AppDelegate.m */,
 				2542461318FC514D0069E394 /* MyScene.h */,
 				2542461418FC514D0069E394 /* MyScene.m */,
 				2542461618FC514D0069E394 /* ViewController.h */,
 				2542461718FC514D0069E394 /* ViewController.m */,
-				F70D6E9C18F8A99000238937 /* AppDelegate.h */,
-				F70D6E9D18F8A99000238937 /* AppDelegate.m */,
 				F7A3D7B518F8EEF1002A1E56 /* SettingsViewController.h */,
 				F7A3D7B618F8EEF1002A1E56 /* SettingsViewController.m */,
 				F7AF80DA18F9C15D0078C410 /* OnibusViewController.h */,
@@ -282,6 +291,9 @@
 				F7AF818D18FA36E90078C410 /* MainTabViewController.m */,
 				2542461D18FC63D30069E394 /* TabBarCustom.h */,
 				2542461E18FC63D30069E394 /* TabBarCustom.m */,
+				2574CBA918FDA58C00DF2254 /* Model.xcdatamodeld */,
+				2574CBAC18FDB35100DF2254 /* DadosPessoais.h */,
+				2574CBAD18FDB35100DF2254 /* DadosPessoais.m */,
 				F70D6EAB18F8A99000238937 /* Images.xcassets */,
 				F70D6E9418F8A99000238937 /* Supporting Files */,
 			);
@@ -554,10 +566,12 @@
 				F7AF816A18FA264E0078C410 /* PNLineChart.m in Sources */,
 				F70D6EA718F8A99000238937 /* FirstViewController.m in Sources */,
 				F7AF80DC18F9C15D0078C410 /* OnibusViewController.m in Sources */,
+				2574CBAE18FDB35100DF2254 /* DadosPessoais.m in Sources */,
 				F7AF818E18FA36E90078C410 /* MainTabViewController.m in Sources */,
 				F7AF818218FA2A4D0078C410 /* AudioQueueObject.m in Sources */,
 				F70D6E9A18F8A99000238937 /* main.m in Sources */,
 				F7A3D7B718F8EEF1002A1E56 /* SettingsViewController.m in Sources */,
+				2574CBAB18FDA58C00DF2254 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,6 +810,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2574CBA918FDA58C00DF2254 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2574CBAA18FDA58C00DF2254 /* Model.xcdatamodel */,
+			);
+			currentVersion = 2574CBAA18FDA58C00DF2254 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F70D6E8218F8A99000238937 /* Project object */;
 }
