@@ -56,6 +56,8 @@
     item1.selectedImage = [UIImage imageNamed:@"map32"];
     item2.selectedImage = [UIImage imageNamed:@"map32"];
     item3.selectedImage = [UIImage imageNamed:@"map32"];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
