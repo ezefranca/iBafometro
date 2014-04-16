@@ -14,6 +14,7 @@
 		2542461F18FC63D30069E394 /* TabBarCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 2542461E18FC63D30069E394 /* TabBarCustom.m */; };
 		254BA2EE18FF11570052E939 /* telephone45.png in Resources */ = {isa = PBXBuildFile; fileRef = 254BA2ED18FF11570052E939 /* telephone45.png */; };
 		254BA2F118FF12DF0052E939 /* TaxiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 254BA2F018FF12DF0052E939 /* TaxiView.m */; };
+		254BA2F418FF1D340052E939 /* AmigosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 254BA2F318FF1D340052E939 /* AmigosView.m */; };
 		2574CBA818FDA52400DF2254 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2574CBA718FDA52400DF2254 /* CoreData.framework */; };
 		F70D6E8E18F8A99000238937 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70D6E8D18F8A99000238937 /* Foundation.framework */; };
 		F70D6E9018F8A99000238937 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70D6E8F18F8A99000238937 /* CoreGraphics.framework */; };
@@ -95,6 +96,8 @@
 		254BA2ED18FF11570052E939 /* telephone45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = telephone45.png; sourceTree = "<group>"; };
 		254BA2EF18FF12DF0052E939 /* TaxiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxiView.h; sourceTree = "<group>"; };
 		254BA2F018FF12DF0052E939 /* TaxiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxiView.m; sourceTree = "<group>"; };
+		254BA2F218FF1D340052E939 /* AmigosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigosView.h; sourceTree = "<group>"; };
+		254BA2F318FF1D340052E939 /* AmigosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigosView.m; sourceTree = "<group>"; };
 		2574CBA718FDA52400DF2254 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F70D6E8A18F8A99000238937 /* iBafometro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBafometro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70D6E8D18F8A99000238937 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -268,6 +271,8 @@
 			children = (
 				F7A5665418F8BB6F00B5B20A /* Dependencies */,
 				F70D6E9F18F8A99000238937 /* Main_iPhone.storyboard */,
+				254BA2F218FF1D340052E939 /* AmigosView.h */,
+				254BA2F318FF1D340052E939 /* AmigosView.m */,
 				F70D6E9C18F8A99000238937 /* AppDelegate.h */,
 				F70D6E9D18F8A99000238937 /* AppDelegate.m */,
 				254BA2EF18FF12DF0052E939 /* TaxiView.h */,
@@ -569,6 +574,7 @@
 				F70D6EA718F8A99000238937 /* FirstViewController.m in Sources */,
 				F7AF80DC18F9C15D0078C410 /* OnibusViewController.m in Sources */,
 				F7AF818E18FA36E90078C410 /* MainTabViewController.m in Sources */,
+				254BA2F418FF1D340052E939 /* AmigosView.m in Sources */,
 				F7AF818218FA2A4D0078C410 /* AudioQueueObject.m in Sources */,
 				F70D6E9A18F8A99000238937 /* main.m in Sources */,
 				F7A3D7B718F8EEF1002A1E56 /* SettingsViewController.m in Sources */,
