@@ -8,8 +8,6 @@
 
 #import "SettingsViewController.h"
 #import "AppDelegate.h"
-#import "DadosPessoais.h"
-
 
 @interface SettingsViewController ()
 
@@ -36,13 +34,6 @@
 {
     [super viewDidLoad];
     
-    //1
-    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
-    //2
-    self.managedObjectContext = appDelegate.managedObjectContext;
-    
-    
-    // Faz a consulta no coreData e retorna no array "coreDataArray"
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,57 +54,51 @@
 */
 
 - (IBAction)botaoSalvar:(id)sender {
-    
-    // Add Entry to PhoneBook Data base and reset all fields
-    
-    //  1
-    DadosPessoais * novosDados = [NSEntityDescription insertNewObjectForEntityForName:@"DadosPessoais"
-                                                      inManagedObjectContext:self.managedObjectContext];
-    //  2
-    novosDados.nome = self.labelNome.text;
-    novosDados.numerotaxi = self.labelTaxista.text;
-    novosDados.contatoamigo = self.labelAmigo.text;
-    novosDados.enderecocasa = self.labelEndereco.text;
-    
-    //  3
-    NSError *error;
-    if (![self.managedObjectContext save:&error]) {
-        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-    }
-    //  4
+
+
+    // Limpar Labels
     self.labelNome.text = @"";
     self.labelTaxista.text = @"";
     self.labelAmigo.text = @"";
     self.labelEndereco.text = @"";
     
-    //  5
+    // Acabou a edicao
     [self.view endEditing:YES];
     
+    // Esconde o teclado
+    [_labelAmigo resignFirstResponder];
+    [_labelEndereco resignFirstResponder];
+    [_labelNome resignFirstResponder];
+    [_labelTaxista resignFirstResponder];
+        
+    // Criacao das strings para armazenar os dados
+    NSString *usuarioNome = [self.labelNome text];
+    NSString *numeroTaxi  = [self.labelTaxista text];
+    NSString *endereco = [self.labelEndereco text];
+    NSString *nomeAmigo = [self.labelAmigo text];
+    
+    // Criar as instancias de NSData
+//        UIImage *contactImage = contactImageView.image;
+//        NSData *imageData = UIImageJPEGRepresentation(contactImage, 100);
+//        
+    
+    // Salvar os dados
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        
+    [defaults setObject:usuarioNome forKey:@"nome"];
+    [defaults setObject:numeroTaxi forKey:@"taxi"];
+    [defaults setObject:endereco forKey:@"enderco"];
+    [defaults setObject:nomeAmigo forKey:@"amigo"];
+//  [defaults setObject:imageData forKey:@"image"];
+        
+    [defaults synchronize];
+        
+    NSLog(@"Dados Salvos");
     
 }
 
 - (IBAction)botaoConsulta:(id)sender {
-    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
-    
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"DadosPessoais"];
-    //NSPredicate *pred = [NSPredicate predicateWithFormat:@"nome"];
-    //[request setPredicate:pred];
-    DadosPessoais *busca = nil;
-    
-    NSError *error;
-    NSArray *objetos = [context executeFetchRequest:request error:&error];
-    
-    if ([objetos count] == 0) {
-        NSLog(@"Vazio");
-    }else {
-        
-        NSLog(@"%@", objetos);
-    }
-    
-//    self.coreDataArray = [appDelegate consultaCoreData];
-//    DadosPessoais *dados = [self.coreDataArray objectAtIndex:1];
-//    NSLog(@"Nome: %@ - Taxi: %@", dados.nome, dados.numerotaxi);
+
 }
 
 //Métodos para ocultacao do teclado
@@ -121,6 +106,28 @@
 //Select the text field in the view and display the Connections Inspector (View -> Utilities -> Connections Inspector)
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{
 	[textField resignFirstResponder];
+    
+    /*
+     // Get the stored data before the view loads
+     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+     
+     NSString *firstName = [defaults objectForKey:@"firstName"];
+     NSString *lastName = [defaults objectForKey:@"lastname"];
+     
+     int age = [defaults integerForKey:@"age"];
+     NSString *ageString = [NSString stringWithFormat:@"%i",age];
+     
+     NSData *imageData = [defaults dataForKey:@"image"];
+     UIImage *contactImage = [UIImage imageWithData:imageData];
+     
+     // Update the UI elements with the saved data
+     firstNameTextField.text = firstName;
+     lastNameTextField.text = lastName;
+     ageTextField.text = ageString;
+     contactImageView.image = contactImage;
+    
+    
+    */
 	return YES;
 }
 
