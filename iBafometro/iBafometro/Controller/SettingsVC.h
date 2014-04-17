@@ -7,14 +7,18 @@
 //
 
 #import <FacebookSDK/FacebookSDK.h>
+#import "DTAlertView.h"
 
-@interface SettingsVC : UIViewController <UIApplicationDelegate>
+@interface SettingsVC : UIViewController <UIApplicationDelegate, FBLoginViewDelegate, FBViewControllerDelegate, DTAlertViewDelegate>
 - (IBAction)botaoSalvar:(id)sender;
 - (IBAction)botaoConsulta:(id)sender;
+- (IBAction)botaoAmigo:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITextField *labelNome;
 @property (weak, nonatomic) IBOutlet UITextField *labelTaxista;
 @property (weak, nonatomic) IBOutlet UITextField *labelAmigo;
 @property (weak, nonatomic) IBOutlet UITextField *labelEndereco;
+
+@property (retain, nonatomic) FBFriendPickerViewController *friendPickerController;
 
 @end

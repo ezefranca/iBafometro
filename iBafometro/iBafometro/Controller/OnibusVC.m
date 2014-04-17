@@ -48,4 +48,21 @@
 }
 */
 
+- (IBAction)botaoPosicao:(id)sender {
+    MKCoordinateRegion region;
+
+    region.center = self.mapa.userLocation.coordinate;
+    
+    [self.mapa setRegion:region animated:YES];
+    [self.mapa setShowsUserLocation:YES];
+    //NSLog(@"%@", _teste);
+}
+
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+   _teste = userLocation.location.coordinate;
+    
+    self.mapa.centerCoordinate = userLocation.location.coordinate;
+}
+
 @end

@@ -12,5 +12,8 @@
 
 @interface OnibusVC : UIViewController
 @property (strong, nonatomic) IBOutlet MKMapView *mapa;
+@property (weak, nonatomic) IBOutlet UIButton *localizarUsuario;
+@property CLLocationCoordinate2D teste;
+- (IBAction)botaoPosicao:(id)sender;
 
 @end
