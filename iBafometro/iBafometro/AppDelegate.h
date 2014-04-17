@@ -12,7 +12,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
-#import "SocialView.h"
+#import "SocialVC.h"
 #import "FSKSerialGenerator.h"
 #define APP_DELEGATE ((AppDelegate*)[[UIApplication sharedApplication] delegate])
 
