@@ -8,7 +8,7 @@
 
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface SettingsView : FBUserSettingsViewController <UIApplicationDelegate>
+@interface SettingsView : UIViewController <UIApplicationDelegate>
 - (IBAction)botaoSalvar:(id)sender;
 - (IBAction)botaoConsulta:(id)sender;
 
