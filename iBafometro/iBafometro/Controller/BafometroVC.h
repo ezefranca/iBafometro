@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
+
+#import "CharReceiver.h"
 #import "PNChart.h"
 #import "PNLineChartData.h"
 #import "PNLineChartDataItem.h"
@@ -15,9 +19,7 @@
 #import "FSKRecognizer.h"
 #import "CharReceiver.h"
 
-@interface BafometroVC : UIViewController <CharReceiver>{
-    //FSKRecognizer *recognizer;
-    //AudioSignalAnalyzer *analyzer;
-}
+@interface BafometroVC : UIViewController <AVAudioSessionDelegate>
+- (IBAction)apagar:(id)sender;
 - (IBAction)buttonBafometer:(id)sender;
 @end

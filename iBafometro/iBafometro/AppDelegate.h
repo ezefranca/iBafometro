@@ -23,10 +23,10 @@
 //@public
     //FSKSerialGenerator* _generator;
 }
-@property (strong, nonatomic) BafometroVC *bafometroView;
-@property (strong, nonatomic) FSKRecognizer *recognizer;
-@property (strong, nonatomic) AudioSignalAnalyzer *analyzer;
-@property (strong, nonatomic) FSKSerialGenerator *generator;
+//@property (strong, nonatomic) BafometroVC *bafometroView;
+//@property (strong, nonatomic) FSKRecognizer *recognizer;
+//@property (strong, nonatomic) AudioSignalAnalyzer *analyzer;
+//@property (strong, nonatomic) FSKSerialGenerator *generator;
 @property NSError *erro;
 
 @property (strong, nonatomic) UIWindow *window;

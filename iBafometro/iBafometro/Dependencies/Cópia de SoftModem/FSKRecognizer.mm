@@ -92,12 +92,6 @@
 				bitPosition = 0;
 			}
 			break;
-        case FSKSuccess:
-            NSLog(@"FSKSucess");
-            break;
-        case FSKFail:
-            NSLog(@"FSKFail");
-            break;
 	}
 	state = newState;
 }

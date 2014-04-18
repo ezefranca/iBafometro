@@ -56,6 +56,9 @@
 		F70D6EBF18F8A99000238937 /* iBafometroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F70D6EBE18F8A99000238937 /* iBafometroTests.m */; };
 		F70D6ECC18F8AA6C00238937 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70D6ECB18F8AA6C00238937 /* MapKit.framework */; };
 		F70D6ECE18F8AA7700238937 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70D6ECD18F8AA7700238937 /* CoreLocation.framework */; };
+		F744607B190185B80078A82E /* Bafometro.m in Sources */ = {isa = PBXBuildFile; fileRef = F744607A190185B80078A82E /* Bafometro.m */; };
+		F744607E1901B92C0078A82E /* PontosOnibus.m in Sources */ = {isa = PBXBuildFile; fileRef = F744607D1901B92C0078A82E /* PontosOnibus.m */; };
+		F74460801901DAFE0078A82E /* busstop.png in Resources */ = {isa = PBXBuildFile; fileRef = F744607F1901DAFE0078A82E /* busstop.png */; };
 		F7A5666B18F8BB6F00B5B20A /* NSString+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A5665718F8BB6F00B5B20A /* NSString+HexColor.m */; };
 		F7AF810918F9DD840078C410 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AF810818F9DD840078C410 /* Twitter.framework */; };
 		F7AF810B18F9DD930078C410 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AF810A18F9DD930078C410 /* Accounts.framework */; };
@@ -157,6 +160,11 @@
 		F70D6ECB18F8AA6C00238937 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F70D6ECD18F8AA7700238937 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F70D6ECF18F8AACF00238937 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = DEVELOPER_DIR; };
+		F7446079190185B80078A82E /* Bafometro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bafometro.h; path = Bafometro/Bafometro.h; sourceTree = "<group>"; };
+		F744607A190185B80078A82E /* Bafometro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bafometro.m; path = Bafometro/Bafometro.m; sourceTree = "<group>"; };
+		F744607C1901B92C0078A82E /* PontosOnibus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PontosOnibus.h; path = PontosOnibus/PontosOnibus.h; sourceTree = "<group>"; };
+		F744607D1901B92C0078A82E /* PontosOnibus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PontosOnibus.m; path = PontosOnibus/PontosOnibus.m; sourceTree = "<group>"; };
+		F744607F1901DAFE0078A82E /* busstop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = busstop.png; sourceTree = "<group>"; };
 		F7A5665618F8BB6F00B5B20A /* NSString+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HexColor.h"; sourceTree = "<group>"; };
 		F7A5665718F8BB6F00B5B20A /* NSString+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HexColor.m"; sourceTree = "<group>"; };
 		F7A5665818F8BB6F00B5B20A /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
@@ -283,6 +291,7 @@
 		25FCA77B1900694400C0AA85 /* icones */ = {
 			isa = PBXGroup;
 			children = (
+				F744607F1901DAFE0078A82E /* busstop.png */,
 				25FCA77C1900694400C0AA85 /* bus25.png */,
 				25FCA77D1900694400C0AA85 /* facebook24.png */,
 				25FCA77E1900694400C0AA85 /* hands-shake.png */,
@@ -399,6 +408,10 @@
 		F7A5665418F8BB6F00B5B20A /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				F744607C1901B92C0078A82E /* PontosOnibus.h */,
+				F744607D1901B92C0078A82E /* PontosOnibus.m */,
+				F7446079190185B80078A82E /* Bafometro.h */,
+				F744607A190185B80078A82E /* Bafometro.m */,
 				25FCA79F1900739800C0AA85 /* DTAlertView */,
 				F7AF817018FA2A4D0078C410 /* SoftModem */,
 				F7AF815018FA264E0078C410 /* PNChart */,
@@ -567,6 +580,7 @@
 				25FCA79C1900694400C0AA85 /* Spaceship.png in Resources */,
 				25FCA79B1900694400C0AA85 /* Mussum.jpg in Resources */,
 				25FCA7921900694400C0AA85 /* locateButton@2x.png in Resources */,
+				F74460801901DAFE0078A82E /* busstop.png in Resources */,
 				25FCA7951900694400C0AA85 /* map32.png in Resources */,
 				25FCA7931900694400C0AA85 /* location.png in Resources */,
 				F70D6E9818F8A99000238937 /* InfoPlist.strings in Resources */,
@@ -598,7 +612,9 @@
 				F7AF816518FA264E0078C410 /* PNBar.m in Sources */,
 				F7AF816D18FA264E0078C410 /* UICountingLabel.m in Sources */,
 				25FCA7751900693A00C0AA85 /* TaxiVC.m in Sources */,
+				F744607B190185B80078A82E /* Bafometro.m in Sources */,
 				F7AF816718FA264E0078C410 /* PNChartLabel.m in Sources */,
+				F744607E1901B92C0078A82E /* PontosOnibus.m in Sources */,
 				25FCA76B1900693A00C0AA85 /* BafometroVC.m in Sources */,
 				F7AF816B18FA264E0078C410 /* PNLineChartData.m in Sources */,
 				F7A5666B18F8BB6F00B5B20A /* NSString+HexColor.m in Sources */,

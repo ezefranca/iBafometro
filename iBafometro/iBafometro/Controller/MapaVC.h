@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
+
 @interface MapaVC : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 {
     CLLocationManager *localizacaoManager;

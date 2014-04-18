@@ -10,10 +10,11 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface OnibusVC : UIViewController
-@property (strong, nonatomic) IBOutlet MKMapView *mapa;
+@interface OnibusVC : UIViewController <MKMapViewDelegate, MKAnnotation>
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapa;
 @property (weak, nonatomic) IBOutlet UIButton *localizarUsuario;
-@property CLLocationCoordinate2D teste;
+
 - (IBAction)botaoPosicao:(id)sender;
 
 @end

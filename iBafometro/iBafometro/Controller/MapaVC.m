@@ -29,8 +29,16 @@
     
     [self.mapa setDelegate:self];
     
-   
+    NSDictionary *mapLocation = @{@"name": @"Walt Disney World",
+                                  @"lat": @28.41871,
+                                  @"lng": @-81.58121
+                                  };
+    double latitude = [[mapLocation objectForKey:@"lat"] floatValue];
+    double longitude = [[mapLocation objectForKey:@"lng"] floatValue];
     
+	CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude, longitude);
+    NSLog(@"lat: %f, lng: %f", coordinate.latitude, coordinate.longitude);
+
     
     //Deixar o mapa redondo
     CGRect x = self.mapa.bounds;

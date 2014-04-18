@@ -206,6 +206,9 @@
                           }];
 }
 
+- (IBAction)apagarBotao:(id)sender {
+}
+
 - (void)makeRequestToShareLink {
     
     // NOTE: pre-filling fields associated with Facebook posts,

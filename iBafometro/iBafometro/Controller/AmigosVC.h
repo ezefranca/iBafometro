@@ -11,5 +11,6 @@
 
 @interface AmigosVC : UIViewController <FBLoginViewDelegate>
 - (IBAction)botaoAmigo:(id)sender;
+- (IBAction)apagarBotao:(id)sender;
 
 @end

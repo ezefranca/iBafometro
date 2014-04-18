@@ -9,6 +9,7 @@
 #import "OnibusVC.h"
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "PontosOnibus.h"
 
 @interface OnibusVC ()
 
@@ -28,7 +29,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.mapa.delegate = self;
+    [self.mapa setShowsUserLocation:YES];
+    CLLocationCoordinate2D annotationCoordinate = CLLocationCoordinate2DMake(28.544192, -81.373286);
+    
+    PontosOnibus *ponto_onibus = [[PontosOnibus alloc]initWithTitle:@"Ponto de Onibus" Localizacao:annotationCoordinate];
+
+ //   ponto_onibus.subtitle = @"Cool swans";
+ //   ponto_onibus.image = [UIImage imageNamed:@"bus25.png"];
+    
+    [self.mapa addAnnotation:ponto_onibus];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,9 +71,28 @@
 
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
-   _teste = userLocation.location.coordinate;
+    CLLocationCoordinate2D usuario = userLocation.location.coordinate;
+    MKCoordinateRegion centroDoMapa = MKCoordinateRegionMakeWithDistance(usuario, 1000, 1000);
+   
+    [self.mapa setRegion:centroDoMapa];
+}
+
+- (MKAnnotationView*)mapView:(MKMapView*)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    if([annotation isKindOfClass:[PontosOnibus class]]) {
+ 
+        PontosOnibus *ponto = (PontosOnibus *)annotation;
+        MKAnnotationView *anotacao = [self.mapa dequeueReusableAnnotationViewWithIdentifier:@"PontosOnibus"];
+
+    if(anotacao == nil) {
+        anotacao = ponto.pontoDeOnibusView;
+    }else{
+        anotacao.annotation = annotation;
+    }
     
-    self.mapa.centerCoordinate = userLocation.location.coordinate;
+    return anotacao;
+    }
+    return nil;
 }
 
 @end
