@@ -12,3 +12,10 @@ Desenvolvimento de um bafometro com arduino, interfaceado com iOS através da co
 Como maneira de maior integração com usuário, todos os textos inclusive os títulos foram feitos em estilo as falas do personagem [Mussum]().
 
 If you are not a portuguese speaker, Mussum does not have sense for you, search about your job [from here](http://en.wikipedia.org/wiki/Mussum).
+
+Recursos
+=======
+
+Créditos:
+
+Icones para mapa: [mapIcons](http://mapicons.nicolasmollet.com/)
