@@ -15,8 +15,6 @@
 -(NSData*) hexToBytes ;
 @end
 
-
-
 @implementation NSString (NSStringHexToBytes)
 -(NSData*) hexToBytes {
     NSMutableData* data = [NSMutableData data];
@@ -50,9 +48,25 @@
     [circleChart setStrokeColor:PNRed];
     [circleChart strokeChart];
     
+ 
+    APP_DELEGATE.recognizer = [[FSKRecognizer alloc] init];
+    //APP_DELEGATE.analyzer = [[AudioSignalAnalyzer alloc] init];
+    [APP_DELEGATE.analyzer addRecognizer: APP_DELEGATE.recognizer]; // set recognizer to analyzer
+    [APP_DELEGATE.analyzer record]; // start analyzing
+    
+    [APP_DELEGATE.recognizer addReceiver: self];
+    [APP_DELEGATE.analyzer addRecognizer:APP_DELEGATE.recognizer];
+    
+    
     [self.view addSubview:circleChart];
     //self.title = @"iMonitor Ruido";
 }
+
+-(void)receivedChar:(char)input
+{
+   NSLog(@"Input recebido %c", input);
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -74,8 +88,8 @@
     //NSLog(@"%@", hex);
     //NSLog(@"%@", [hex hexToBytes]);
     
-	[APP_DELEGATE->_generator writeByte:0xff];
-    [APP_DELEGATE->_generator writeBytes:[hexData bytes] length:hexData.length];
+	[APP_DELEGATE.generator writeByte:0x00];
+  //  [APP_DELEGATE.generator writeBytes:[hexData bytes] length:hexData.length];
     
     
 //    // Configure the view.

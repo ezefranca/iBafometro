@@ -32,25 +32,48 @@
     tabBar.selectedIndex = 0;
     
     // coisas da comunicacao FSK
+    
     [[NSUserDefaults standardUserDefaults] registerDefaults:
      [NSDictionary dictionaryWithObjectsAndKeys:
       @"0x01FF00FF", @"first", // NEC protocol previous channel
       @"0x01FF807F", @"second", // NEC protocol next channel
       nil]];
     
+    [self setBafometroView:self.bafometroView];
     AVAudioSession *session = [AVAudioSession sharedInstance];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(interruption:) name:AVAudioSessionInterruptionNotification object:nil];
+    if(session.inputAvailable) {
+        NSLog(@"Input is available, playandrecord\n");
+        [session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    } else {
+        NSLog(@"Input is available, playback\n");
+        [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+    }
     
-	if(session.inputAvailable){
-		[session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
-	}else{
-		[session setCategory:AVAudioSessionCategoryPlayback error:nil];
-	}
-	[session setActive:YES error:nil];
-	[session setPreferredIOBufferDuration:0.023220 error:nil];
+    [session setActive:YES error:nil];
+    [session setPreferredIOBufferDuration:0.023220 error:nil];
+    _generator = [[FSKSerialGenerator alloc] init]; [_generator play];
+    _recognizer = [[FSKRecognizer alloc] init]; //[_recognizer addReceiver:self.bafometroView];
+    _analyzer = [[AudioSignalAnalyzer alloc] init]; //[_analyzer addRecognizer:_recognizer];
+
+    if (session.inputAvailable) {
+        NSLog(@"Input is available, analyzer record\n"); [_analyzer record];
+    }
+
     
-	_generator = [[FSKSerialGenerator alloc] init];
-	[_generator play];
+//    AVAudioSession *session = [AVAudioSession sharedInstance];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(interruption:) name:AVAudioSessionInterruptionNotification object:nil];
+//    
+//	if(session.inputAvailable){
+//		[session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+//	}else{
+//		[session setCategory:AVAudioSessionCategoryPlayback error:nil];
+//	}
+//	[session setActive:YES error:nil];
+//	[session setPreferredIOBufferDuration:0.023220 error:nil];
+//    
+//	_generator = [[FSKSerialGenerator alloc] init];
+//	[_generator play];
     
     return YES;
 }
