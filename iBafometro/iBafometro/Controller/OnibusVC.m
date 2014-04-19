@@ -11,10 +11,6 @@
 #import <CoreLocation/CoreLocation.h>
 #import "PontosOnibus.h"
 
-@interface OnibusVC ()
-
-@end
-
 @implementation OnibusVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

@@ -56,9 +56,39 @@
 		F70D6EBF18F8A99000238937 /* iBafometroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F70D6EBE18F8A99000238937 /* iBafometroTests.m */; };
 		F70D6ECC18F8AA6C00238937 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70D6ECB18F8AA6C00238937 /* MapKit.framework */; };
 		F70D6ECE18F8AA7700238937 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70D6ECD18F8AA7700238937 /* CoreLocation.framework */; };
-		F744607B190185B80078A82E /* Bafometro.m in Sources */ = {isa = PBXBuildFile; fileRef = F744607A190185B80078A82E /* Bafometro.m */; };
-		F744607E1901B92C0078A82E /* PontosOnibus.m in Sources */ = {isa = PBXBuildFile; fileRef = F744607D1901B92C0078A82E /* PontosOnibus.m */; };
 		F74460801901DAFE0078A82E /* busstop.png in Resources */ = {isa = PBXBuildFile; fileRef = F744607F1901DAFE0078A82E /* busstop.png */; };
+		F74460901901E7F40078A82E /* MSAnnotatedGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460831901E7F40078A82E /* MSAnnotatedGauge.m */; };
+		F74460911901E7F40078A82E /* MSArcLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460851901E7F40078A82E /* MSArcLayer.m */; };
+		F74460921901E7F40078A82E /* MSGradientArcLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460881901E7F40078A82E /* MSGradientArcLayer.m */; };
+		F74460931901E7F40078A82E /* MSNeedleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F744608A1901E7F40078A82E /* MSNeedleView.m */; };
+		F74460941901E7F40078A82E /* MSRangeGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = F744608C1901E7F40078A82E /* MSRangeGauge.m */; };
+		F74460951901E7F40078A82E /* MSSimpleGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = F744608E1901E7F40078A82E /* MSSimpleGauge.m */; };
+		F74460991901E8070078A82E /* PontosOnibus.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460981901E8070078A82E /* PontosOnibus.m */; };
+		F744609D1901E8140078A82E /* Bafometro.m in Sources */ = {isa = PBXBuildFile; fileRef = F744609C1901E8140078A82E /* Bafometro.m */; };
+		F744609F1901EF5A0078A82E /* mussum_luhan.png in Resources */ = {isa = PBXBuildFile; fileRef = F744609E1901EF5A0078A82E /* mussum_luhan.png */; };
+		F74460CF1901FEE90078A82E /* FUIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460A51901FEE90078A82E /* FUIAlertView.m */; };
+		F74460D01901FEE90078A82E /* FUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460A71901FEE90078A82E /* FUIButton.m */; };
+		F74460D11901FEE90078A82E /* FUICellBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460A91901FEE90078A82E /* FUICellBackgroundView.m */; };
+		F74460D21901FEE90078A82E /* FUIPopoverBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460AB1901FEE90078A82E /* FUIPopoverBackgroundView.m */; };
+		F74460D31901FEE90078A82E /* FUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460AD1901FEE90078A82E /* FUISegmentedControl.m */; };
+		F74460D41901FEE90078A82E /* FUISwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460AF1901FEE90078A82E /* FUISwitch.m */; };
+		F74460D51901FEE90078A82E /* FUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460B11901FEE90078A82E /* FUITextField.m */; };
+		F74460D61901FEE90078A82E /* UIBarButtonItem+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460B31901FEE90078A82E /* UIBarButtonItem+FlatUI.m */; };
+		F74460D71901FEE90078A82E /* UIColor+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460B51901FEE90078A82E /* UIColor+FlatUI.m */; };
+		F74460D81901FEE90078A82E /* UIFont+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460B71901FEE90078A82E /* UIFont+FlatUI.m */; };
+		F74460D91901FEE90078A82E /* UIImage+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460B91901FEE90078A82E /* UIImage+FlatUI.m */; };
+		F74460DA1901FEE90078A82E /* UINavigationBar+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460BB1901FEE90078A82E /* UINavigationBar+FlatUI.m */; };
+		F74460DB1901FEE90078A82E /* UIPopoverController+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460BD1901FEE90078A82E /* UIPopoverController+FlatUI.m */; };
+		F74460DC1901FEE90078A82E /* UIProgressView+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460BF1901FEE90078A82E /* UIProgressView+FlatUI.m */; };
+		F74460DD1901FEE90078A82E /* UISlider+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460C11901FEE90078A82E /* UISlider+FlatUI.m */; };
+		F74460DE1901FEE90078A82E /* UIStepper+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460C31901FEE90078A82E /* UIStepper+FlatUI.m */; };
+		F74460DF1901FEE90078A82E /* UITabBar+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460C51901FEE90078A82E /* UITabBar+FlatUI.m */; };
+		F74460E01901FEE90078A82E /* UITableViewCell+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460C71901FEE90078A82E /* UITableViewCell+FlatUI.m */; };
+		F74460E11901FEE90078A82E /* UIToolbar+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460C91901FEE90078A82E /* UIToolbar+FlatUI.m */; };
+		F74460E21901FEE90078A82E /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F74460CB1901FEE90078A82E /* Lato-Bold.ttf */; };
+		F74460E31901FEE90078A82E /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F74460CC1901FEE90078A82E /* Lato-Italic.ttf */; };
+		F74460E41901FEE90078A82E /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F74460CD1901FEE90078A82E /* Lato-Light.ttf */; };
+		F74460E51901FEE90078A82E /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F74460CE1901FEE90078A82E /* Lato-Regular.ttf */; };
 		F7A5666B18F8BB6F00B5B20A /* NSString+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A5665718F8BB6F00B5B20A /* NSString+HexColor.m */; };
 		F7AF810918F9DD840078C410 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AF810818F9DD840078C410 /* Twitter.framework */; };
 		F7AF810B18F9DD930078C410 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AF810A18F9DD930078C410 /* Accounts.framework */; };
@@ -160,11 +190,69 @@
 		F70D6ECB18F8AA6C00238937 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F70D6ECD18F8AA7700238937 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F70D6ECF18F8AACF00238937 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = DEVELOPER_DIR; };
-		F7446079190185B80078A82E /* Bafometro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bafometro.h; path = Bafometro/Bafometro.h; sourceTree = "<group>"; };
-		F744607A190185B80078A82E /* Bafometro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bafometro.m; path = Bafometro/Bafometro.m; sourceTree = "<group>"; };
-		F744607C1901B92C0078A82E /* PontosOnibus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PontosOnibus.h; path = PontosOnibus/PontosOnibus.h; sourceTree = "<group>"; };
-		F744607D1901B92C0078A82E /* PontosOnibus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PontosOnibus.m; path = PontosOnibus/PontosOnibus.m; sourceTree = "<group>"; };
 		F744607F1901DAFE0078A82E /* busstop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = busstop.png; sourceTree = "<group>"; };
+		F74460821901E7F40078A82E /* MSAnnotatedGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAnnotatedGauge.h; sourceTree = "<group>"; };
+		F74460831901E7F40078A82E /* MSAnnotatedGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSAnnotatedGauge.m; sourceTree = "<group>"; };
+		F74460841901E7F40078A82E /* MSArcLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSArcLayer.h; sourceTree = "<group>"; };
+		F74460851901E7F40078A82E /* MSArcLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSArcLayer.m; sourceTree = "<group>"; };
+		F74460861901E7F40078A82E /* MSArcLayerSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSArcLayerSubclass.h; sourceTree = "<group>"; };
+		F74460871901E7F40078A82E /* MSGradientArcLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSGradientArcLayer.h; sourceTree = "<group>"; };
+		F74460881901E7F40078A82E /* MSGradientArcLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSGradientArcLayer.m; sourceTree = "<group>"; };
+		F74460891901E7F40078A82E /* MSNeedleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNeedleView.h; sourceTree = "<group>"; };
+		F744608A1901E7F40078A82E /* MSNeedleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSNeedleView.m; sourceTree = "<group>"; };
+		F744608B1901E7F40078A82E /* MSRangeGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRangeGauge.h; sourceTree = "<group>"; };
+		F744608C1901E7F40078A82E /* MSRangeGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRangeGauge.m; sourceTree = "<group>"; };
+		F744608D1901E7F40078A82E /* MSSimpleGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSimpleGauge.h; sourceTree = "<group>"; };
+		F744608E1901E7F40078A82E /* MSSimpleGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSimpleGauge.m; sourceTree = "<group>"; };
+		F744608F1901E7F40078A82E /* MSSimpleGaugeSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSimpleGaugeSubclass.h; sourceTree = "<group>"; };
+		F74460971901E8070078A82E /* PontosOnibus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PontosOnibus.h; sourceTree = "<group>"; };
+		F74460981901E8070078A82E /* PontosOnibus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PontosOnibus.m; sourceTree = "<group>"; };
+		F744609B1901E8140078A82E /* Bafometro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bafometro.h; sourceTree = "<group>"; };
+		F744609C1901E8140078A82E /* Bafometro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bafometro.m; sourceTree = "<group>"; };
+		F744609E1901EF5A0078A82E /* mussum_luhan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mussum_luhan.png; sourceTree = "<group>"; };
+		F74460A31901FEE90078A82E /* FlatUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlatUIKit.h; sourceTree = "<group>"; };
+		F74460A41901FEE90078A82E /* FUIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIAlertView.h; sourceTree = "<group>"; };
+		F74460A51901FEE90078A82E /* FUIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIAlertView.m; sourceTree = "<group>"; };
+		F74460A61901FEE90078A82E /* FUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIButton.h; sourceTree = "<group>"; };
+		F74460A71901FEE90078A82E /* FUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIButton.m; sourceTree = "<group>"; };
+		F74460A81901FEE90078A82E /* FUICellBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUICellBackgroundView.h; sourceTree = "<group>"; };
+		F74460A91901FEE90078A82E /* FUICellBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUICellBackgroundView.m; sourceTree = "<group>"; };
+		F74460AA1901FEE90078A82E /* FUIPopoverBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIPopoverBackgroundView.h; sourceTree = "<group>"; };
+		F74460AB1901FEE90078A82E /* FUIPopoverBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIPopoverBackgroundView.m; sourceTree = "<group>"; };
+		F74460AC1901FEE90078A82E /* FUISegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUISegmentedControl.h; sourceTree = "<group>"; };
+		F74460AD1901FEE90078A82E /* FUISegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUISegmentedControl.m; sourceTree = "<group>"; };
+		F74460AE1901FEE90078A82E /* FUISwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUISwitch.h; sourceTree = "<group>"; };
+		F74460AF1901FEE90078A82E /* FUISwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUISwitch.m; sourceTree = "<group>"; };
+		F74460B01901FEE90078A82E /* FUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUITextField.h; sourceTree = "<group>"; };
+		F74460B11901FEE90078A82E /* FUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUITextField.m; sourceTree = "<group>"; };
+		F74460B21901FEE90078A82E /* UIBarButtonItem+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+FlatUI.h"; sourceTree = "<group>"; };
+		F74460B31901FEE90078A82E /* UIBarButtonItem+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+FlatUI.m"; sourceTree = "<group>"; };
+		F74460B41901FEE90078A82E /* UIColor+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FlatUI.h"; sourceTree = "<group>"; };
+		F74460B51901FEE90078A82E /* UIColor+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FlatUI.m"; sourceTree = "<group>"; };
+		F74460B61901FEE90078A82E /* UIFont+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FlatUI.h"; sourceTree = "<group>"; };
+		F74460B71901FEE90078A82E /* UIFont+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FlatUI.m"; sourceTree = "<group>"; };
+		F74460B81901FEE90078A82E /* UIImage+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FlatUI.h"; sourceTree = "<group>"; };
+		F74460B91901FEE90078A82E /* UIImage+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FlatUI.m"; sourceTree = "<group>"; };
+		F74460BA1901FEE90078A82E /* UINavigationBar+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+FlatUI.h"; sourceTree = "<group>"; };
+		F74460BB1901FEE90078A82E /* UINavigationBar+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+FlatUI.m"; sourceTree = "<group>"; };
+		F74460BC1901FEE90078A82E /* UIPopoverController+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+FlatUI.h"; sourceTree = "<group>"; };
+		F74460BD1901FEE90078A82E /* UIPopoverController+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+FlatUI.m"; sourceTree = "<group>"; };
+		F74460BE1901FEE90078A82E /* UIProgressView+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+FlatUI.h"; sourceTree = "<group>"; };
+		F74460BF1901FEE90078A82E /* UIProgressView+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+FlatUI.m"; sourceTree = "<group>"; };
+		F74460C01901FEE90078A82E /* UISlider+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISlider+FlatUI.h"; sourceTree = "<group>"; };
+		F74460C11901FEE90078A82E /* UISlider+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISlider+FlatUI.m"; sourceTree = "<group>"; };
+		F74460C21901FEE90078A82E /* UIStepper+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStepper+FlatUI.h"; sourceTree = "<group>"; };
+		F74460C31901FEE90078A82E /* UIStepper+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStepper+FlatUI.m"; sourceTree = "<group>"; };
+		F74460C41901FEE90078A82E /* UITabBar+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+FlatUI.h"; sourceTree = "<group>"; };
+		F74460C51901FEE90078A82E /* UITabBar+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+FlatUI.m"; sourceTree = "<group>"; };
+		F74460C61901FEE90078A82E /* UITableViewCell+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+FlatUI.h"; sourceTree = "<group>"; };
+		F74460C71901FEE90078A82E /* UITableViewCell+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+FlatUI.m"; sourceTree = "<group>"; };
+		F74460C81901FEE90078A82E /* UIToolbar+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+FlatUI.h"; sourceTree = "<group>"; };
+		F74460C91901FEE90078A82E /* UIToolbar+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+FlatUI.m"; sourceTree = "<group>"; };
+		F74460CB1901FEE90078A82E /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		F74460CC1901FEE90078A82E /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		F74460CD1901FEE90078A82E /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		F74460CE1901FEE90078A82E /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		F7A5665618F8BB6F00B5B20A /* NSString+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HexColor.h"; sourceTree = "<group>"; };
 		F7A5665718F8BB6F00B5B20A /* NSString+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HexColor.m"; sourceTree = "<group>"; };
 		F7A5665818F8BB6F00B5B20A /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
@@ -278,6 +366,7 @@
 		25FCA7771900694400C0AA85 /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				F744609E1901EF5A0078A82E /* mussum_luhan.png */,
 				25FCA77B1900694400C0AA85 /* icones */,
 				25FCA7781900694400C0AA85 /* 14169905_s.jpg */,
 				25FCA7791900694400C0AA85 /* cabeca.png */,
@@ -405,13 +494,126 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F74460811901E7F40078A82E /* Gauges */ = {
+			isa = PBXGroup;
+			children = (
+				F74460821901E7F40078A82E /* MSAnnotatedGauge.h */,
+				F74460831901E7F40078A82E /* MSAnnotatedGauge.m */,
+				F74460841901E7F40078A82E /* MSArcLayer.h */,
+				F74460851901E7F40078A82E /* MSArcLayer.m */,
+				F74460861901E7F40078A82E /* MSArcLayerSubclass.h */,
+				F74460871901E7F40078A82E /* MSGradientArcLayer.h */,
+				F74460881901E7F40078A82E /* MSGradientArcLayer.m */,
+				F74460891901E7F40078A82E /* MSNeedleView.h */,
+				F744608A1901E7F40078A82E /* MSNeedleView.m */,
+				F744608B1901E7F40078A82E /* MSRangeGauge.h */,
+				F744608C1901E7F40078A82E /* MSRangeGauge.m */,
+				F744608D1901E7F40078A82E /* MSSimpleGauge.h */,
+				F744608E1901E7F40078A82E /* MSSimpleGauge.m */,
+				F744608F1901E7F40078A82E /* MSSimpleGaugeSubclass.h */,
+			);
+			path = Gauges;
+			sourceTree = "<group>";
+		};
+		F74460961901E8070078A82E /* PontosOnibus */ = {
+			isa = PBXGroup;
+			children = (
+				F74460971901E8070078A82E /* PontosOnibus.h */,
+				F74460981901E8070078A82E /* PontosOnibus.m */,
+			);
+			path = PontosOnibus;
+			sourceTree = "<group>";
+		};
+		F744609A1901E8140078A82E /* Bafometro */ = {
+			isa = PBXGroup;
+			children = (
+				F744609B1901E8140078A82E /* Bafometro.h */,
+				F744609C1901E8140078A82E /* Bafometro.m */,
+			);
+			path = Bafometro;
+			sourceTree = "<group>";
+		};
+		F74460A01901FEE90078A82E /* FlatUIkit */ = {
+			isa = PBXGroup;
+			children = (
+				F74460A11901FEE90078A82E /* Classes */,
+				F74460CA1901FEE90078A82E /* Resources */,
+			);
+			path = FlatUIkit;
+			sourceTree = "<group>";
+		};
+		F74460A11901FEE90078A82E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F74460A21901FEE90078A82E /* ios */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F74460A21901FEE90078A82E /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				F74460A31901FEE90078A82E /* FlatUIKit.h */,
+				F74460A41901FEE90078A82E /* FUIAlertView.h */,
+				F74460A51901FEE90078A82E /* FUIAlertView.m */,
+				F74460A61901FEE90078A82E /* FUIButton.h */,
+				F74460A71901FEE90078A82E /* FUIButton.m */,
+				F74460A81901FEE90078A82E /* FUICellBackgroundView.h */,
+				F74460A91901FEE90078A82E /* FUICellBackgroundView.m */,
+				F74460AA1901FEE90078A82E /* FUIPopoverBackgroundView.h */,
+				F74460AB1901FEE90078A82E /* FUIPopoverBackgroundView.m */,
+				F74460AC1901FEE90078A82E /* FUISegmentedControl.h */,
+				F74460AD1901FEE90078A82E /* FUISegmentedControl.m */,
+				F74460AE1901FEE90078A82E /* FUISwitch.h */,
+				F74460AF1901FEE90078A82E /* FUISwitch.m */,
+				F74460B01901FEE90078A82E /* FUITextField.h */,
+				F74460B11901FEE90078A82E /* FUITextField.m */,
+				F74460B21901FEE90078A82E /* UIBarButtonItem+FlatUI.h */,
+				F74460B31901FEE90078A82E /* UIBarButtonItem+FlatUI.m */,
+				F74460B41901FEE90078A82E /* UIColor+FlatUI.h */,
+				F74460B51901FEE90078A82E /* UIColor+FlatUI.m */,
+				F74460B61901FEE90078A82E /* UIFont+FlatUI.h */,
+				F74460B71901FEE90078A82E /* UIFont+FlatUI.m */,
+				F74460B81901FEE90078A82E /* UIImage+FlatUI.h */,
+				F74460B91901FEE90078A82E /* UIImage+FlatUI.m */,
+				F74460BA1901FEE90078A82E /* UINavigationBar+FlatUI.h */,
+				F74460BB1901FEE90078A82E /* UINavigationBar+FlatUI.m */,
+				F74460BC1901FEE90078A82E /* UIPopoverController+FlatUI.h */,
+				F74460BD1901FEE90078A82E /* UIPopoverController+FlatUI.m */,
+				F74460BE1901FEE90078A82E /* UIProgressView+FlatUI.h */,
+				F74460BF1901FEE90078A82E /* UIProgressView+FlatUI.m */,
+				F74460C01901FEE90078A82E /* UISlider+FlatUI.h */,
+				F74460C11901FEE90078A82E /* UISlider+FlatUI.m */,
+				F74460C21901FEE90078A82E /* UIStepper+FlatUI.h */,
+				F74460C31901FEE90078A82E /* UIStepper+FlatUI.m */,
+				F74460C41901FEE90078A82E /* UITabBar+FlatUI.h */,
+				F74460C51901FEE90078A82E /* UITabBar+FlatUI.m */,
+				F74460C61901FEE90078A82E /* UITableViewCell+FlatUI.h */,
+				F74460C71901FEE90078A82E /* UITableViewCell+FlatUI.m */,
+				F74460C81901FEE90078A82E /* UIToolbar+FlatUI.h */,
+				F74460C91901FEE90078A82E /* UIToolbar+FlatUI.m */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		F74460CA1901FEE90078A82E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F74460CB1901FEE90078A82E /* Lato-Bold.ttf */,
+				F74460CC1901FEE90078A82E /* Lato-Italic.ttf */,
+				F74460CD1901FEE90078A82E /* Lato-Light.ttf */,
+				F74460CE1901FEE90078A82E /* Lato-Regular.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		F7A5665418F8BB6F00B5B20A /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				F744607C1901B92C0078A82E /* PontosOnibus.h */,
-				F744607D1901B92C0078A82E /* PontosOnibus.m */,
-				F7446079190185B80078A82E /* Bafometro.h */,
-				F744607A190185B80078A82E /* Bafometro.m */,
+				F74460A01901FEE90078A82E /* FlatUIkit */,
+				F744609A1901E8140078A82E /* Bafometro */,
+				F74460961901E8070078A82E /* PontosOnibus */,
+				F74460811901E7F40078A82E /* Gauges */,
 				25FCA79F1900739800C0AA85 /* DTAlertView */,
 				F7AF817018FA2A4D0078C410 /* SoftModem */,
 				F7AF815018FA264E0078C410 /* PNChart */,
@@ -567,14 +769,19 @@
 			files = (
 				25FCA78B1900694400C0AA85 /* 14169905_s.jpg in Resources */,
 				25FCA7991900694400C0AA85 /* tools.png in Resources */,
+				F74460E31901FEE90078A82E /* Lato-Italic.ttf in Resources */,
+				F74460E41901FEE90078A82E /* Lato-Light.ttf in Resources */,
 				25FCA7961900694400C0AA85 /* rsz_map32.png in Resources */,
 				25FCA7911900694400C0AA85 /* locateButton.png in Resources */,
+				F744609F1901EF5A0078A82E /* mussum_luhan.png in Resources */,
 				25FCA7981900694400C0AA85 /* telephone45.png in Resources */,
 				25FCA7901900694400C0AA85 /* hands-shake.png in Resources */,
 				25FCA78E1900694400C0AA85 /* bus25.png in Resources */,
 				25FCA7941900694400C0AA85 /* location@2x.png in Resources */,
+				F74460E51901FEE90078A82E /* Lato-Regular.ttf in Resources */,
 				F70D6EAC18F8A99000238937 /* Images.xcassets in Resources */,
 				25FCA78C1900694400C0AA85 /* cabeca.png in Resources */,
+				F74460E21901FEE90078A82E /* Lato-Bold.ttf in Resources */,
 				F70D6EA118F8A99000238937 /* Main_iPhone.storyboard in Resources */,
 				F7AF819018FB82610078C410 /* Localizable.strings in Resources */,
 				25FCA79C1900694400C0AA85 /* Spaceship.png in Resources */,
@@ -606,37 +813,62 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F74460941901E7F40078A82E /* MSRangeGauge.m in Sources */,
 				25FCA7761900693A00C0AA85 /* ViewController.m in Sources */,
+				F74460DB1901FEE90078A82E /* UIPopoverController+FlatUI.m in Sources */,
 				F7AF818618FA2A4D0078C410 /* FSKSerialGenerator.mm in Sources */,
 				25FCA7A41900739800C0AA85 /* DTAlertView.m in Sources */,
 				F7AF816518FA264E0078C410 /* PNBar.m in Sources */,
 				F7AF816D18FA264E0078C410 /* UICountingLabel.m in Sources */,
+				F74460D41901FEE90078A82E /* FUISwitch.m in Sources */,
 				25FCA7751900693A00C0AA85 /* TaxiVC.m in Sources */,
-				F744607B190185B80078A82E /* Bafometro.m in Sources */,
 				F7AF816718FA264E0078C410 /* PNChartLabel.m in Sources */,
-				F744607E1901B92C0078A82E /* PontosOnibus.m in Sources */,
+				F74460D81901FEE90078A82E /* UIFont+FlatUI.m in Sources */,
+				F744609D1901E8140078A82E /* Bafometro.m in Sources */,
+				F74460D71901FEE90078A82E /* UIColor+FlatUI.m in Sources */,
+				F74460D11901FEE90078A82E /* FUICellBackgroundView.m in Sources */,
 				25FCA76B1900693A00C0AA85 /* BafometroVC.m in Sources */,
 				F7AF816B18FA264E0078C410 /* PNLineChartData.m in Sources */,
+				F74460E01901FEE90078A82E /* UITableViewCell+FlatUI.m in Sources */,
 				F7A5666B18F8BB6F00B5B20A /* NSString+HexColor.m in Sources */,
 				25FCA7741900693A00C0AA85 /* SocialVC.m in Sources */,
 				F7AF818518FA2A4D0078C410 /* FSKRecognizer.mm in Sources */,
+				F74460D31901FEE90078A82E /* FUISegmentedControl.m in Sources */,
+				F74460D61901FEE90078A82E /* UIBarButtonItem+FlatUI.m in Sources */,
+				F74460E11901FEE90078A82E /* UIToolbar+FlatUI.m in Sources */,
+				F74460D01901FEE90078A82E /* FUIButton.m in Sources */,
 				F7AF818318FA2A4D0078C410 /* AudioSignalAnalyzer.m in Sources */,
+				F74460DA1901FEE90078A82E /* UINavigationBar+FlatUI.m in Sources */,
 				25FCA76F1900693A00C0AA85 /* MapaVC.m in Sources */,
 				F7AF818418FA2A4D0078C410 /* AudioSignalGenerator.m in Sources */,
 				25FCA76E1900693A00C0AA85 /* MainTabVC.m in Sources */,
+				F74460901901E7F40078A82E /* MSAnnotatedGauge.m in Sources */,
 				F7AF818718FA2A4D0078C410 /* MultiDelegate.m in Sources */,
+				F74460951901E7F40078A82E /* MSSimpleGauge.m in Sources */,
+				F74460DE1901FEE90078A82E /* UIStepper+FlatUI.m in Sources */,
 				F7AF816C18FA264E0078C410 /* PNLineChartDataItem.m in Sources */,
+				F74460DF1901FEE90078A82E /* UITabBar+FlatUI.m in Sources */,
 				25FCA76A1900693A00C0AA85 /* AmigosVC.m in Sources */,
+				F74460CF1901FEE90078A82E /* FUIAlertView.m in Sources */,
+				F74460911901E7F40078A82E /* MSArcLayer.m in Sources */,
+				F74460D21901FEE90078A82E /* FUIPopoverBackgroundView.m in Sources */,
 				F70D6E9E18F8A99000238937 /* AppDelegate.m in Sources */,
 				F7AF816918FA264E0078C410 /* PNColor.m in Sources */,
+				F74460991901E8070078A82E /* PontosOnibus.m in Sources */,
+				F74460DC1901FEE90078A82E /* UIProgressView+FlatUI.m in Sources */,
+				F74460DD1901FEE90078A82E /* UISlider+FlatUI.m in Sources */,
 				F7AF816618FA264E0078C410 /* PNBarChart.m in Sources */,
 				25FCA7731900693A00C0AA85 /* SettingsVC.m in Sources */,
 				25FCA7701900693A00C0AA85 /* Model.xcdatamodeld in Sources */,
+				F74460D51901FEE90078A82E /* FUITextField.m in Sources */,
 				F7AF816818FA264E0078C410 /* PNCircleChart.m in Sources */,
+				F74460931901E7F40078A82E /* MSNeedleView.m in Sources */,
 				25FCA76C1900693A00C0AA85 /* LoginVC.m in Sources */,
 				F7AF816A18FA264E0078C410 /* PNLineChart.m in Sources */,
 				F7AF818218FA2A4D0078C410 /* AudioQueueObject.m in Sources */,
+				F74460D91901FEE90078A82E /* UIImage+FlatUI.m in Sources */,
 				F70D6E9A18F8A99000238937 /* main.m in Sources */,
+				F74460921901E7F40078A82E /* MSGradientArcLayer.m in Sources */,
 				25FCA7721900693A00C0AA85 /* OnibusVC.m in Sources */,
 				25FCA7A51900739800C0AA85 /* DTProgressStatus.m in Sources */,
 				25FCA7711900693A00C0AA85 /* MyScene.m in Sources */,

@@ -20,10 +20,20 @@
     	// Do any additional setup after loading the view, typically from a nib.
     //[[self tabBar] setSelectedImageTintColor:[UIColor greenColor]];
    // CGRect x = self.facebuquis.bounds;
-    self.facebuquis.layer.cornerRadius = 5;
-    self.facebuquis.layer.borderWidth = 1.0f;
-    self.facebuquis.layer.borderColor = [UIColor clearColor].CGColor;
-    self.facebuquis.clipsToBounds = YES;
+    
+    //Facebook
+    
+    FBLoginView *loginview = [[FBLoginView alloc] init];
+    loginview.frame = CGRectOffset(loginview.frame, 50, 380);
+    loginview.delegate = self;
+    [loginview sizeToFit];
+    loginview.readPermissions = @[@"basic_info", @"email", @"user_likes"];
+    [self.view addSubview:loginview];
+    
+//    self.facebuquis.layer.cornerRadius = 5;
+//    self.facebuquis.layer.borderWidth = 1.0f;
+//    self.facebuquis.layer.borderColor = [UIColor clearColor].CGColor;
+//    self.facebuquis.clipsToBounds = YES;
     
 }
 

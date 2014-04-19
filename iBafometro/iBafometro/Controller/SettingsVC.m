@@ -34,6 +34,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSString *password = [[NSUserDefaults standardUserDefaults] stringForKey:@"senha"];
+    if([password isEqual:nil] || [password isEqual:@"SENHA"]){
+        NSLog(@"Sem senha");
+    }
     
 }
 
@@ -54,45 +58,43 @@
 }
 */
 
-- (IBAction)botaoSalvar:(id)sender {
+#pragma mark - Metodo para salvar com NSDeafults
+
+-(void)salvarDados{
     
-    
-    DTAlertView *alertView = [DTAlertView alertViewWithTitle:@"Please Input Password!!" message:@"Password is \"1234567890\"" delegate:self cancelButtonTitle:@"Cancel" positiveButtonTitle:@"OK"];
-    [alertView setAlertViewMode:DTAlertViewModeTextInput];
-    [alertView setPositiveButtonEnable:YES];
-    // Acabou a edicao
-    [self.view endEditing:YES];
     
     // Esconde o teclado
     [_labelAmigo resignFirstResponder];
     [_labelEndereco resignFirstResponder];
     [_labelNome resignFirstResponder];
     [_labelTaxista resignFirstResponder];
-        
+    
     // Criacao das strings para armazenar os dados
     NSString *usuarioNome = [self.labelNome text];
     NSString *numeroTaxi  = [self.labelTaxista text];
     NSString *endereco = [self.labelEndereco text];
     NSString *nomeAmigo = [self.labelAmigo text];
+    NSString *password = self.alertView.messageLabel.text;
     
     // Criar as instancias de NSData
-//        UIImage *contactImage = contactImageView.image;
-//        NSData *imageData = UIImageJPEGRepresentation(contactImage, 100);
-//        
+    //        UIImage *contactImage = contactImageView.image;
+    //        NSData *imageData = UIImageJPEGRepresentation(contactImage, 100);
+    //
     
     // Salvar os dados
- //   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
+    //   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
     
     [[NSUserDefaults standardUserDefaults] setObject:usuarioNome forKey:@"nome"];
     [[NSUserDefaults standardUserDefaults] setObject:numeroTaxi forKey:@"taxi"];
     [[NSUserDefaults standardUserDefaults] setObject:endereco forKey:@"endereco"];
     [[NSUserDefaults standardUserDefaults] setObject:nomeAmigo forKey:@"amigo"];
-//  [defaults setObject:imageData forKey:@"image"];
-        
+    [[NSUserDefaults standardUserDefaults] setObject:password forKey:@"senha"];
+    //  [defaults setObject:imageData forKey:@"image"];
+    
     [[NSUserDefaults standardUserDefaults] synchronize];
-        
-    NSLog(@"Dados Salvos");
+    
+    NSLog(@"%@", password);
     
     // Limpar Labels
     self.labelNome.text = @"";
@@ -100,9 +102,42 @@
     self.labelAmigo.text = @"";
     self.labelEndereco.text = @"";
     
-    [alertView show];
-    
+    // Acabou a edicao
+    [self.view endEditing:YES];
 }
+
+
+- (IBAction)botaoSalvar:(id)sender {
+    
+    
+    self.alertView = [[FUIAlertView alloc] initWithTitle:@"Salvar Dados" message:@"SENHA" delegate:nil cancelButtonTitle:@"Cancelar" otherButtonTitles:@"Ok", nil];
+    
+    self.alertView.alertViewStyle = FUIAlertViewStyleLoginAndPasswordInput;
+        [@[[self.alertView textFieldAtIndex:0]] enumerateObjectsUsingBlock:^(FUITextField *textField, NSUInteger idx, BOOL *stop) {
+            [textField setTextFieldColor:[UIColor cloudsColor]];
+            [textField setBorderColor:[UIColor asbestosColor]];
+            [textField setCornerRadius:4];
+            [textField setFont:[UIFont flatFontOfSize:14]];
+            [textField setTextColor:[UIColor midnightBlueColor]];
+            }];
+    [[self.alertView textFieldAtIndex:0] setPlaceholder:@"Digite ou Cadastre sua senha"];
+    [[self.alertView textFieldAtIndex:1]setEnabled:NO];
+    
+    self.alertView.delegate = self;
+    self.alertView.titleLabel.textColor = [UIColor cloudsColor];
+    self.alertView.titleLabel.font = [UIFont boldFlatFontOfSize:16];
+    self.alertView.messageLabel.textColor = [UIColor cloudsColor];
+    self.alertView.messageLabel.font = [UIFont flatFontOfSize:14];
+    self.alertView.backgroundOverlay.backgroundColor = [[UIColor cloudsColor] colorWithAlphaComponent:0.8];
+    self.alertView.alertContainer.backgroundColor = [UIColor turquoiseColor];
+    self.alertView.defaultButtonColor = [UIColor cloudsColor];
+    self.alertView.defaultButtonShadowColor = [UIColor asbestosColor];
+    self.alertView.defaultButtonFont = [UIFont boldFlatFontOfSize:16];
+    self.alertView.defaultButtonTitleColor = [UIColor asbestosColor];
+    [self.alertView show];
+}
+
+#pragma mark - Metodo para Consulta dos valores salvos
 
 - (IBAction)botaoConsulta:(id)sender {
     
@@ -110,8 +145,8 @@
     //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     NSString *usuarioNome = [[NSUserDefaults standardUserDefaults] stringForKey:@"nome"];
-    
-    NSLog(@"Nome: %@", usuarioNome);
+    NSString *password = [[NSUserDefaults standardUserDefaults] stringForKey:@"senha"];
+    NSLog(@"Nome: %@ Senha: %@", usuarioNome, password);
     
 }
 
@@ -213,14 +248,6 @@
 }
 
 
-
-
--(IBAction)textFieldReturn:(id)sender
-{
-    [sender resignFirstResponder];
-}
-
-
 // Use this method also if you want to hide keyboard when user touch in background
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -231,6 +258,19 @@
     [_labelTaxista resignFirstResponder];
 }
 
+#pragma mark metodos AlertView
+
+- (void)alertView:(FUIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0) {
+        NSLog(@"Cancelou");
+    }
+    else{
+        if ([[[[self alertView]textFieldAtIndex:0]text] isEqual:@"SENHA"]){
+        [self salvarDados];
+        NSLog(@"era pra ter salvado dados %ld", (long)buttonIndex);
+        }
+    }
+}
 
 @end
 
