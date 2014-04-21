@@ -10,7 +10,13 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface OnibusVC : UIViewController <MKMapViewDelegate, MKAnnotation>
+@interface OnibusVC : UIViewController <MKMapViewDelegate, MKAnnotation, CLLocationManagerDelegate>
+{
+    NSData *jsonDados;
+    double latitude;
+    double longitude;
+}
+
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapa;
 @property (weak, nonatomic) IBOutlet UIButton *localizarUsuario;

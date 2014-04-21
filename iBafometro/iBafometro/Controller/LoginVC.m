@@ -17,6 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.tabBarController.tabBar setHidden:NO];
     	// Do any additional setup after loading the view, typically from a nib.
     //[[self tabBar] setSelectedImageTintColor:[UIColor greenColor]];
    // CGRect x = self.facebuquis.bounds;
@@ -24,7 +25,7 @@
     //Facebook
     
     FBLoginView *loginview = [[FBLoginView alloc] init];
-    loginview.frame = CGRectOffset(loginview.frame, 50, 380);
+    loginview.frame = CGRectOffset(loginview.frame, 50, 350);
     loginview.delegate = self;
     [loginview sizeToFit];
     loginview.readPermissions = @[@"basic_info", @"email", @"user_likes"];

@@ -8,7 +8,6 @@
 
 #import "SettingsVC.h"
 #import "AppDelegate.h"
-#import "DTAlertView.h"
 
 @interface SettingsVC ()
 
@@ -34,11 +33,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self showTabBar];
     NSString *password = [[NSUserDefaults standardUserDefaults] stringForKey:@"senha"];
     if([password isEqual:nil] || [password isEqual:@"SENHA"]){
         NSLog(@"Sem senha");
     }
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -270,6 +269,48 @@
         NSLog(@"era pra ter salvado dados %ld", (long)buttonIndex);
         }
     }
+}
+
+- (void)didMoveToParentViewController:(UIViewController *)parent{
+    [self showTabBar];
+}
+
+- (void)hideTabBar {
+    UITabBar *tabBar = self.tabBarController.tabBar;
+    UIView *parent = tabBar.superview; // UILayoutContainerView
+    UIView *content = [parent.subviews objectAtIndex:0];  // UITransitionView
+    UIView *window = parent.superview;
+    
+    [UIView animateWithDuration:1
+                     animations:^{
+                         CGRect tabFrame = tabBar.frame;
+                         tabFrame.origin.y = CGRectGetMaxY(window.bounds);
+                         tabBar.frame = tabFrame;
+                         content.frame = window.bounds;
+                     }];
+    
+    // 1
+}
+
+- (void)showTabBar {
+    UITabBar *tabBar = self.tabBarController.tabBar;
+    UIView *parent = tabBar.superview; // UILayoutContainerView
+    UIView *content = [parent.subviews objectAtIndex:0];  // UITransitionView
+    UIView *window = parent.superview;
+    
+    [UIView animateWithDuration:0.5
+                     animations:^{
+                         CGRect tabFrame = tabBar.frame;
+                         tabFrame.origin.y = CGRectGetMaxY(window.bounds) - CGRectGetHeight(tabBar.frame);
+                         tabBar.frame = tabFrame;
+                         
+                         CGRect contentFrame = content.frame;
+                         contentFrame.size.height -= tabFrame.size.height;
+                     }];
+    
+    // 2
+    
+    
 }
 
 @end

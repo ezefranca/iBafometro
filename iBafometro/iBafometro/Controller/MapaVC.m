@@ -7,6 +7,7 @@
 //
 
 #import "MapaVC.h"
+#import "OnibusVC.h"
 
 @interface MapaVC ()
 
@@ -26,18 +27,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    //Desabilitar gestos automaticos
+    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+
+    //Configuraçao do Mapa
     [self.mapa setDelegate:self];
     
-    NSDictionary *mapLocation = @{@"name": @"Walt Disney World",
-                                  @"lat": @28.41871,
-                                  @"lng": @-81.58121
-                                  };
-    double latitude = [[mapLocation objectForKey:@"lat"] floatValue];
-    double longitude = [[mapLocation objectForKey:@"lng"] floatValue];
-    
-	CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude, longitude);
-    NSLog(@"lat: %f, lng: %f", coordinate.latitude, coordinate.longitude);
+//    NSDictionary *mapLocation = @{@"name": @"Walt Disney World",
+//                                  @"lat": @28.41871,
+//                                  @"lng": @-81.58121
+//                                  };
+//    double latitude = [[mapLocation objectForKey:@"lat"] floatValue];
+//    double longitude = [[mapLocation objectForKey:@"lng"] floatValue];
+//    
+//	CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude, longitude);
+//    //NSLog(@"lat: %f, lng: %f", coordinate.latitude, coordinate.longitude);
 
     
     //Deixar o mapa redondo
@@ -95,6 +99,12 @@
 }
 */
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"mapaOnibus"]) {
+    }
+}
+
+
 #pragma mark - MKMapViewDelegate methods.
 - (void)mapView:(MKMapView *)mv didAddAnnotationViews:(NSArray *)views {
     MKCoordinateRegion region;
@@ -117,4 +127,46 @@
     self.mapa.centerCoordinate = userLocation.location.coordinate;
 }
 
+- (void)didMoveToParentViewController:(UIViewController *)parent{
+    [self showTabBar];
+}
+
+- (void)hideTabBar {
+    UITabBar *tabBar = self.tabBarController.tabBar;
+    UIView *parent = tabBar.superview; // UILayoutContainerView
+    UIView *content = [parent.subviews objectAtIndex:0];  // UITransitionView
+    UIView *window = parent.superview;
+    
+    [UIView animateWithDuration:1
+                     animations:^{
+                         CGRect tabFrame = tabBar.frame;
+                         tabFrame.origin.y = CGRectGetMaxY(window.bounds);
+                         tabBar.frame = tabFrame;
+                         content.frame = window.bounds;
+                     }];
+    
+    // 1
+}
+
+- (void)showTabBar {
+    UITabBar *tabBar = self.tabBarController.tabBar;
+    UIView *parent = tabBar.superview; // UILayoutContainerView
+    UIView *content = [parent.subviews objectAtIndex:0];  // UITransitionView
+    UIView *window = parent.superview;
+    
+    [UIView animateWithDuration:0.5
+                     animations:^{
+                         CGRect tabFrame = tabBar.frame;
+                         tabFrame.origin.y = CGRectGetMaxY(window.bounds) - CGRectGetHeight(tabBar.frame);
+                         tabBar.frame = tabFrame;
+                         
+                         CGRect contentFrame = content.frame;
+                         contentFrame.size.height -= tabFrame.size.height;
+                     }];
+    
+    // 2
+    
+    
+}
 @end
+

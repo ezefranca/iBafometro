@@ -18,7 +18,7 @@
 #define APP_DELEGATE ((AppDelegate*)[[UIApplication sharedApplication] delegate])
 
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, AVAudioSessionDelegate, AVAudioRecorderDelegate, AVAudioPlayerDelegate, MKMapViewDelegate, CLLocationManagerDelegate> {
+@interface AppDelegate : UIResponder <UIApplicationDelegate, AVAudioSessionDelegate, AVAudioRecorderDelegate, AVAudioPlayerDelegate, MKMapViewDelegate, CLLocationManagerDelegate, UITabBarControllerDelegate> {
 
 //@public
     //FSKSerialGenerator* _generator;
