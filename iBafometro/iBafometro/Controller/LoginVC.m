@@ -7,6 +7,7 @@
 //
 
 #import "LoginVC.h"
+#import "OnibusVC.h"
 
 @interface LoginVC ()
 
@@ -43,5 +44,17 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)longPressDetected:(UILongPressGestureRecognizer *)sender{
+    
+}
+
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+
+ }
+
 
 @end

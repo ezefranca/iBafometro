@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface LoginVC : UIViewController <FBLoginViewDelegate, UITabBarControllerDelegate, UINavigationControllerDelegate>
+@interface LoginVC : UIViewController <FBLoginViewDelegate, UITabBarControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate>
 @property (strong, nonatomic) IBOutlet UIButton *facebuquis;
+- (IBAction)longPressDetected:(UILongPressGestureRecognizer *)sender;
 
 @end

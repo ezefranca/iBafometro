@@ -14,7 +14,7 @@
                     <size key="freeformSize" width="320" height="560"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="LZb-uh-GFZ">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" patternImage="EAFF6429-8C18-4927-A424-72C6CCC16AC4" colorSpace="pattern"/>
+                        <color key="backgroundColor" patternImage="C8BECB55-0395-48A4-8D37-0D21B73C19D9" colorSpace="pattern"/>
                         <color key="barTintColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,6 +60,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1019607843" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Q1c-qR-6Qa" appends="YES" id="uA7-64-HCH"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Social" id="u1e-5L-l1D"/>
                     <navigationItem key="navigationItem" title="Bafometro Title" id="qPQ-iV-CwI">
@@ -68,7 +72,11 @@
                     <size key="freeformSize" width="320" height="560"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="RsY-eB-SPV"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Q1c-qR-6Qa">
+                    <connections>
+                        <action selector="longPressDetected:" destination="CZ4-MO-1fc" id="BR5-wh-fW2"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1352" y="-1138"/>
         </scene>
@@ -494,7 +502,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EU0-ZH-nwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-732" y="1216"/>
+            <point key="canvasLocation" x="-1736" y="-548"/>
         </scene>
         <!--TaxiVC - Taxi - Encontre o ponto mais próximo-->
         <scene sceneID="aCp-1R-2WJ">
@@ -715,7 +723,7 @@
                     <size key="freeformSize" width="320" height="560"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="wkp-fY-6VB">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" patternImage="0817CBA7-35AD-4EE2-80B6-4C89237B8AB9" colorSpace="pattern"/>
+                        <color key="backgroundColor" patternImage="D9E6FC95-6201-448D-8044-B897E9E9FD53" colorSpace="pattern"/>
                         <color key="barTintColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -739,7 +747,7 @@
                     <size key="freeformSize" width="320" height="560"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="bbf-FC-YqP">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" patternImage="DB773E91-9D1F-4209-B9D3-D79E1DC60E1C" colorSpace="pattern"/>
+                        <color key="backgroundColor" patternImage="CD42B9F6-C491-4B96-A007-B066306E929B" colorSpace="pattern"/>
                         <color key="barTintColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -756,7 +764,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="0817CBA7-35AD-4EE2-80B6-4C89237B8AB9" width="320" height="460">
+        <image name="C8BECB55-0395-48A4-8D37-0D21B73C19D9" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -10643,7 +10651,7 @@ CQq/AAkKxAAJCswACQrPAAkK1AAJCtwACQrfAAkK8QAJCvQACQr5AAAAAAAABAEAAAAAAAAAQgAAAAAA
 AAAAAAAAAAAJCvs
 </mutableData>
         </image>
-        <image name="DB773E91-9D1F-4209-B9D3-D79E1DC60E1C" width="320" height="460">
+        <image name="CD42B9F6-C491-4B96-A007-B066306E929B" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -20530,7 +20538,7 @@ CQq/AAkKxAAJCswACQrPAAkK1AAJCtwACQrfAAkK8QAJCvQACQr5AAAAAAAABAEAAAAAAAAAQgAAAAAA
 AAAAAAAAAAAJCvs
 </mutableData>
         </image>
-        <image name="EAFF6429-8C18-4927-A424-72C6CCC16AC4" width="320" height="460">
+        <image name="D9E6FC95-6201-448D-8044-B897E9E9FD53" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
