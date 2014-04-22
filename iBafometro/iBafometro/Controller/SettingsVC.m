@@ -34,6 +34,36 @@
 {
     [super viewDidLoad];
     [self showTabBar];
+    
+    //--------- Customizacao botoes
+    
+    self.botaoAmigo.buttonColor = [UIColor cloudsColor];
+    self.botaoAmigo.shadowColor = [UIColor asbestosColor];
+    self.botaoAmigo.shadowHeight = 3.0f;
+    self.botaoAmigo.cornerRadius = 6.0f;
+    self.botaoAmigo.titleLabel.font = [UIFont boldFlatFontOfSize:12];
+    [self.botaoAmigo setTitleColor:[UIColor asbestosColor] forState:UIControlStateNormal];
+    [self.botaoAmigo setTitleColor:[UIColor asbestosColor] forState:UIControlStateHighlighted];
+    
+    self.botaoSalvar.buttonColor = [UIColor cloudsColor];
+    self.botaoSalvar.shadowColor = [UIColor asbestosColor];
+    self.botaoSalvar.shadowHeight = 3.0f;
+    self.botaoSalvar.cornerRadius = 6.0f;
+    self.botaoSalvar.titleLabel.font = [UIFont boldFlatFontOfSize:12];
+    [self.botaoSalvar setTitleColor:[UIColor asbestosColor] forState:UIControlStateNormal];
+    [self.botaoSalvar setTitleColor:[UIColor asbestosColor] forState:UIControlStateHighlighted];
+    
+    self.botaoConsulta.buttonColor = [UIColor cloudsColor];
+    self.botaoConsulta.shadowColor = [UIColor asbestosColor];
+    self.botaoConsulta.shadowHeight = 3.0f;
+    self.botaoConsulta.cornerRadius = 6.0f;
+    self.botaoConsulta.titleLabel.font = [UIFont boldFlatFontOfSize:12];
+    [self.botaoConsulta setTitleColor:[UIColor asbestosColor] forState:UIControlStateNormal];
+    [self.botaoConsulta setTitleColor:[UIColor asbestosColor] forState:UIControlStateHighlighted];
+
+    
+    //---------
+    
     NSString *password = [[NSUserDefaults standardUserDefaults] stringForKey:@"senha"];
     if([password isEqual:nil] || [password isEqual:@"SENHA"]){
         NSLog(@"Sem senha");

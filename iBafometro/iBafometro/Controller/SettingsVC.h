@@ -31,6 +31,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *labelTaxista;
 @property (weak, nonatomic) IBOutlet UITextField *labelAmigo;
 @property (weak, nonatomic) IBOutlet UITextField *labelEndereco;
+@property (strong, nonatomic) IBOutlet FUIButton *botaoConsulta;
+@property (strong, nonatomic) IBOutlet FUIButton *botaoSalvar;
+@property (strong, nonatomic) IBOutlet FUIButton *botaoAmigo;
 
 @property FUIAlertView *alertView;
 

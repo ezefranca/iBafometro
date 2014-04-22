@@ -14,7 +14,7 @@
                     <size key="freeformSize" width="320" height="560"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="LZb-uh-GFZ">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" patternImage="F38C2652-E4D5-4A5B-A0F1-4CE9FDD936FF" colorSpace="pattern"/>
+                        <color key="backgroundColor" patternImage="EAFF6429-8C18-4927-A424-72C6CCC16AC4" colorSpace="pattern"/>
                         <color key="barTintColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -41,14 +41,6 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkx-Wv-fsC">
-                                <rect key="frame" x="45" y="369" width="230" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="dologo.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="0.0" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bafometris" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxj-A0-80b">
                                 <rect key="frame" x="24" y="97" width="272" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -59,6 +51,13 @@
                                 <rect key="frame" x="113" y="20" width="95" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="https://github.com/ezefranca/iBafometro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNd-sh-rhc">
+                                <rect key="frame" x="0.0" y="434" width="320" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1019607843" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -67,9 +66,6 @@
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="PUZ-xL-qdK"/>
                     </navigationItem>
                     <size key="freeformSize" width="320" height="560"/>
-                    <connections>
-                        <outlet property="facebuquis" destination="Fkx-Wv-fsC" id="WKa-kz-dWr"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="RsY-eB-SPV"/>
@@ -209,13 +205,10 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zt7-8Y-Wfo">
-                                <rect key="frame" x="116" y="317" width="88" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zt7-8Y-Wfo">
+                                <rect key="frame" x="253" y="389" width="47" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="88" id="A77-Ml-Dew"/>
-                                </constraints>
-                                <state key="normal" title="Facebook">
+                                <state key="normal" title="Facebook" image="facebook24.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -244,12 +237,9 @@
                                 <fontDescription key="fontDescription" name="Avenir-BlackOblique" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef6-WG-oQC" customClass="FUIButton">
-                                <rect key="frame" x="21" y="279" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef6-WG-oQC" customClass="FUIButton">
+                                <rect key="frame" x="21" y="279" width="103" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="UaN-zI-vzs"/>
-                                </constraints>
                                 <state key="normal" title="Salvar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -264,8 +254,8 @@
                                 <fontDescription key="fontDescription" name="Avenir-BlackOblique" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ve3-cy-b2J">
-                                <rect key="frame" x="184" y="279" width="114" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ve3-cy-b2J" customClass="FUIButton">
+                                <rect key="frame" x="184" y="279" width="114" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Consultar dados">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -302,9 +292,10 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCw-ls-rex">
-                                <rect key="frame" x="170" y="144" width="142" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCw-ls-rex" customClass="FUIButton">
+                                <rect key="frame" x="197" y="147" width="101" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="Escolher Amigo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -323,6 +314,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <size key="freeformSize" width="320" height="560"/>
                     <connections>
+                        <outlet property="botaoAmigo" destination="kCw-ls-rex" id="R2E-KK-k4U"/>
+                        <outlet property="botaoConsulta" destination="Ef6-WG-oQC" id="zk4-LQ-ihM"/>
+                        <outlet property="botaoSalvar" destination="Ve3-cy-b2J" id="D2T-TP-50I"/>
                         <outlet property="labelAmigo" destination="sqc-7p-xfS" id="6yM-fm-iUE"/>
                         <outlet property="labelEndereco" destination="DJa-i2-hOU" id="TR2-rA-5Ei"/>
                         <outlet property="labelNome" destination="If9-mJ-UWJ" id="jfy-xL-qdQ"/>
@@ -712,16 +706,16 @@
             </objects>
             <point key="canvasLocation" x="-4105" y="-214"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Controller - Pessoal-->
         <scene sceneID="UTg-if-58B">
             <objects>
                 <navigationController definesPresentationContext="YES" id="YHT-gX-AJ1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" id="phy-GW-rM6"/>
+                    <tabBarItem key="tabBarItem" title="Pessoal" image="id-card.png" id="phy-GW-rM6"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <size key="freeformSize" width="320" height="560"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="wkp-fY-6VB">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" patternImage="67566AF8-B2DA-4020-B3D2-E1BA9E3010F8" colorSpace="pattern"/>
+                        <color key="backgroundColor" patternImage="0817CBA7-35AD-4EE2-80B6-4C89237B8AB9" colorSpace="pattern"/>
                         <color key="barTintColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -745,7 +739,7 @@
                     <size key="freeformSize" width="320" height="560"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="bbf-FC-YqP">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" patternImage="CD41E76C-1E66-4C77-8B54-F9405CBA3722" colorSpace="pattern"/>
+                        <color key="backgroundColor" patternImage="DB773E91-9D1F-4209-B9D3-D79E1DC60E1C" colorSpace="pattern"/>
                         <color key="barTintColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -762,7 +756,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="67566AF8-B2DA-4020-B3D2-E1BA9E3010F8" width="320" height="460">
+        <image name="0817CBA7-35AD-4EE2-80B6-4C89237B8AB9" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -10649,7 +10643,7 @@ CQq/AAkKxAAJCswACQrPAAkK1AAJCtwACQrfAAkK8QAJCvQACQr5AAAAAAAABAEAAAAAAAAAQgAAAAAA
 AAAAAAAAAAAJCvs
 </mutableData>
         </image>
-        <image name="CD41E76C-1E66-4C77-8B54-F9405CBA3722" width="320" height="460">
+        <image name="DB773E91-9D1F-4209-B9D3-D79E1DC60E1C" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -20536,7 +20530,7 @@ CQq/AAkKxAAJCswACQrPAAkK1AAJCtwACQrfAAkK8QAJCvQACQr5AAAAAAAABAEAAAAAAAAAQgAAAAAA
 AAAAAAAAAAAJCvs
 </mutableData>
         </image>
-        <image name="F38C2652-E4D5-4A5B-A0F1-4CE9FDD936FF" width="320" height="460">
+        <image name="EAFF6429-8C18-4927-A424-72C6CCC16AC4" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -30425,8 +30419,9 @@ AAAAAAAAAAAJCvs
         </image>
         <image name="Spaceship.png" width="394" height="347"/>
         <image name="bus25.png" width="512" height="512"/>
-        <image name="dologo.png" width="230" height="66"/>
+        <image name="facebook24.png" width="512" height="512"/>
         <image name="hands-shake.png" width="512" height="512"/>
+        <image name="id-card.png" width="30" height="30"/>
         <image name="locateButton.png" width="32" height="30"/>
         <image name="location.png" width="20" height="20"/>
         <image name="mussum_luhan.png" width="666" height="692"/>

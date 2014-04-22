@@ -46,16 +46,16 @@
     UITabBarItem *item3 = [self.tabBar.items objectAtIndex:3];
     
     // this way, the icon gets rendered as it is (thus, it needs to be green in this example)
-    item0.image = [[UIImage imageNamed:@"map32.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item1.image = [[UIImage imageNamed:@"map32.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item2.image = [[UIImage imageNamed:@"map32.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item3.image = [[UIImage imageNamed:@"map32.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item0.image = [[UIImage imageNamed:@"target.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item1.image = [[UIImage imageNamed:@"spiral.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item2.image = [[UIImage imageNamed:@"map-pin.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item3.image = [[UIImage imageNamed:@"id-card.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     // this icon is used for selected tab and it will get tinted as defined in self.tabBar.tintColor
-    item0.selectedImage = [UIImage imageNamed:@"map32"];
-    item1.selectedImage = [UIImage imageNamed:@"map32"];
-    item2.selectedImage = [UIImage imageNamed:@"map32"];
-    item3.selectedImage = [UIImage imageNamed:@"map32"];
+    item0.selectedImage = [UIImage imageNamed:@"target"];
+    item1.selectedImage = [UIImage imageNamed:@"spiral"];
+    item2.selectedImage = [UIImage imageNamed:@"map-pin"];
+    item3.selectedImage = [UIImage imageNamed:@"id-card"];
     
     
 }
