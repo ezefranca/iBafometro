@@ -1,17 +1,16 @@
 //
-//  OnibusViewController.m
+//  TaxiView.m
 //  iBafometro
 //
-//  Created by Ezequiel Franca dos Santos on 12/04/14.
+//  Created by EZEQUIEL FRANCA DOS SANTOS on 16/04/14.
 //  Copyright (c) 2014 Ezequiel Franca dos Santos. All rights reserved.
 //
 
 #import "OnibusVC.h"
-#import "AppDelegate.h"
-#import <MapKit/MapKit.h>
-#import <CoreLocation/CoreLocation.h>
-#import "PontosOnibus.h"
-#import "MapaVC.h"
+
+@interface OnibusVC ()
+
+@end
 
 @implementation OnibusVC{
     CLLocationManager *locationManager;
@@ -30,27 +29,11 @@
 {
     [super viewDidLoad];
     self.mapa.delegate = self;
-    [self.mapa setShowsUserLocation:YES];
-    
     locationManager = [[CLLocationManager alloc] init];
-    
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
     [locationManager startUpdatingLocation];
-    
-    //Aqui tem que pegar os pontos por perto
-    
-    
-//    CLLocationCoordinate2D annotationCoordinate = CLLocationCoordinate2DMake(28.544192, -81.373286);
-//    
-//    PontosOnibus *ponto_onibus = [[PontosOnibus alloc]initWithTitle:@"Ponto de Onibus" Localizacao:annotationCoordinate];
-
- //   ponto_onibus.subtitle = @"Cool swans";
- //   ponto_onibus.image = [UIImage imageNamed:@"bus25.png"];
-
-    
-    //[self.mapa addAnnotation:ponto_onibus];
+    [self.mapa setShowsUserLocation:YES];
     
 }
 
@@ -61,15 +44,15 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (void)googlePlaces: (NSString *)stringforPlace{
     
@@ -95,10 +78,10 @@
         double Latitude = [[[[[[jsonDadosUsuario objectForKey:@"results"] objectAtIndex:i] objectForKey:@"geometry"] objectForKey:@"location"] valueForKey:@"lat"] floatValue];
         double Longitude = [[[[[[jsonDadosUsuario objectForKey:@"results"] objectAtIndex:i] objectForKey:@"geometry"] objectForKey:@"location"] valueForKey:@"lng"] floatValue];
         
-        CLLocationCoordinate2D Coordenada_ponto_de_onibus = CLLocationCoordinate2DMake(Latitude, Longitude);
+        CLLocationCoordinate2D Coordenada_ponto_de_taxi = CLLocationCoordinate2DMake(Latitude, Longitude);
         
-        PontosOnibus *ponto_onibus = [[PontosOnibus alloc]initWithTitle:@"Ponto de Onibus" Localizacao:Coordenada_ponto_de_onibus];
-        [self.mapa addAnnotation:ponto_onibus];
+        PontosTaxi *ponto_taxi = [[PontosTaxi alloc]initWithTitle:@"Ponto de Taxi" Localizacao:Coordenada_ponto_de_taxi];
+        [self.mapa addAnnotation:ponto_taxi];
         //NSLog(@"%f, %f", Latitude, Longitude );
     }
     
@@ -117,7 +100,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    //NSLog(@"Localizacao: %@", newLocation);
+    // NSLog(@"Localizacao: %@", newLocation);
     CLLocation *currentLocation = newLocation;
     
     if (currentLocation != nil) {
@@ -130,18 +113,18 @@
     NSLog(@"voltou");
     [super viewWillDisappear:YES];
     
-//    if ([self.delegate respondsToSelector:@selector(finishedReading:)]) {
-//        [self.delegate finishedReadingWithPosition:self.position];
-//    }
+    //    if ([self.delegate respondsToSelector:@selector(finishedReading:)]) {
+    //        [self.delegate finishedReadingWithPosition:self.position];
+    //    }
 }
 
 
-- (IBAction)botaoPosicao:(id)sender {
+- (void)desenhaPontos{
     MKCoordinateRegion region;
     region.center = self.mapa.userLocation.coordinate;
     
     NSString *urlString =
-    [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?location=%f,%f&radius=5000&sensor=false&types=bus_station&key=AIzaSyBG-qHUWnj375cRL4ke_Fe4-c_lxQIJrPI", latitude, longitude];
+    [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?location=%f,%f&radius=5000&sensor=false&types=taxi_stand&key=AIzaSyBG-qHUWnj375cRL4ke_Fe4-c_lxQIJrPI", latitude, longitude];
     [self googlePlaces:urlString];
     //NSLog(@"%@", _teste);
 }
@@ -149,28 +132,65 @@
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
     CLLocationCoordinate2D usuario = userLocation.location.coordinate;
-    MKCoordinateRegion centroDoMapa = MKCoordinateRegionMakeWithDistance(usuario, 1000, 1000);
-   
+    MKCoordinateRegion centroDoMapa = MKCoordinateRegionMakeWithDistance(usuario, 500, 500);
+    
     [self.mapa setRegion:centroDoMapa];
 }
 
 - (MKAnnotationView*)mapView:(MKMapView*)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
-    if([annotation isKindOfClass:[PontosOnibus class]]) {
- 
-        PontosOnibus *ponto = (PontosOnibus *)annotation;
-        MKAnnotationView *anotacao = [self.mapa dequeueReusableAnnotationViewWithIdentifier:@"PontosOnibus"];
-
-    if(anotacao == nil) {
-        anotacao = ponto.pontoDeOnibusView;
-    }else{
-        anotacao.annotation = annotation;
-    }
-    
-    return anotacao;
+    if([annotation isKindOfClass:[PontosTaxi class]]) {
+        
+        PontosTaxi *ponto = (PontosTaxi *)annotation;
+        MKAnnotationView *anotacao = [self.mapa dequeueReusableAnnotationViewWithIdentifier:@"PontosTaxi"];
+        
+        if(anotacao == nil) {
+            anotacao = ponto.pontoDeTaxiView;
+        }else{
+            anotacao.annotation = annotation;
+        }
+        
+        return anotacao;
     }
     return nil;
 }
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
+
+- (IBAction)ligarTaxi1:(id)sender {
+    NSLog(@"%f  %f", latitude, longitude);
+    [self desenhaPontos];
+    [self ligandoTaxista];
+}
+
+- (IBAction)ligarTaxi2:(id)sender {
+    [self desenhaPontos];
+    [self ligandoTaxista];
+}
+
+
+- (void)ligandoTaxista{
+    NSString *numeroTaxista = @"+919876543210";
+    NSURL *telefoneURL = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",numeroTaxista]];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:telefoneURL]) {
+        [[UIApplication sharedApplication] openURL:telefoneURL];
+    } else
+    {
+        NSLog(@"Nao foi possivel fazer sua ligacao");
+    }
+}
+
+#pragma mark Ligaçāo Taxista
 
 - (void)didMoveToParentViewController:(UIViewController *)parent{
     [self hideTabBar];
@@ -210,8 +230,7 @@
                      }];
     
     // 2
-
-
+    
+    
 }
 @end
-

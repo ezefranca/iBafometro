@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		254BE57F1908345600E0CB89 /* PontosTaxi.m in Sources */ = {isa = PBXBuildFile; fileRef = 254BE57E1908345600E0CB89 /* PontosTaxi.m */; };
+		254BE58119083CE300E0CB89 /* taxi.png in Resources */ = {isa = PBXBuildFile; fileRef = 254BE58019083CE300E0CB89 /* taxi.png */; };
 		2574CBA818FDA52400DF2254 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2574CBA718FDA52400DF2254 /* CoreData.framework */; };
 		25FCA76A1900693A00C0AA85 /* AmigosVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FCA7521900693A00C0AA85 /* AmigosVC.m */; };
 		25FCA76B1900693A00C0AA85 /* BafometroVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FCA7541900693A00C0AA85 /* BafometroVC.m */; };
@@ -140,6 +142,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		254BE57D1908345600E0CB89 /* PontosTaxi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PontosTaxi.h; path = PontosTaxi/PontosTaxi.h; sourceTree = "<group>"; };
+		254BE57E1908345600E0CB89 /* PontosTaxi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PontosTaxi.m; path = PontosTaxi/PontosTaxi.m; sourceTree = "<group>"; };
+		254BE58019083CE300E0CB89 /* taxi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taxi.png; sourceTree = "<group>"; };
 		2574CBA718FDA52400DF2254 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		25FCA7511900693A00C0AA85 /* AmigosVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigosVC.h; sourceTree = "<group>"; };
 		25FCA7521900693A00C0AA85 /* AmigosVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigosVC.m; sourceTree = "<group>"; };
@@ -410,6 +415,7 @@
 		25FCA77B1900694400C0AA85 /* icones */ = {
 			isa = PBXGroup;
 			children = (
+				254BE58019083CE300E0CB89 /* taxi.png */,
 				F7FE5EAB190633FB00B1DDF1 /* id-card.png */,
 				F7FE5EAC190633FB00B1DDF1 /* map-pin.png */,
 				F7FE5EAD190633FB00B1DDF1 /* spiral.png */,
@@ -660,6 +666,8 @@
 				F7AF817018FA2A4D0078C410 /* SoftModem */,
 				F7AF815018FA264E0078C410 /* PNChart */,
 				F7A5665518F8BB6F00B5B20A /* FK */,
+				254BE57D1908345600E0CB89 /* PontosTaxi.h */,
+				254BE57E1908345600E0CB89 /* PontosTaxi.m */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -847,6 +855,7 @@
 				F74460E51901FEE90078A82E /* Lato-Regular.ttf in Resources */,
 				F70D6EAC18F8A99000238937 /* Images.xcassets in Resources */,
 				25FCA78C1900694400C0AA85 /* cabeca.png in Resources */,
+				254BE58119083CE300E0CB89 /* taxi.png in Resources */,
 				F74460E21901FEE90078A82E /* Lato-Bold.ttf in Resources */,
 				F70D6EA118F8A99000238937 /* Main_iPhone.storyboard in Resources */,
 				F7FE5EB2190633FB00B1DDF1 /* target.png in Resources */,
@@ -904,6 +913,7 @@
 				F74460D11901FEE90078A82E /* FUICellBackgroundView.m in Sources */,
 				25FCA76B1900693A00C0AA85 /* BafometroVC.m in Sources */,
 				F7AF816B18FA264E0078C410 /* PNLineChartData.m in Sources */,
+				254BE57F1908345600E0CB89 /* PontosTaxi.m in Sources */,
 				F74460E01901FEE90078A82E /* UITableViewCell+FlatUI.m in Sources */,
 				F7A5666B18F8BB6F00B5B20A /* NSString+HexColor.m in Sources */,
 				25FCA7741900693A00C0AA85 /* SocialVC.m in Sources */,
