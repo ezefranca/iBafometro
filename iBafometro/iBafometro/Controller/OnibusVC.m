@@ -1,5 +1,5 @@
 //
-//  TaxiView.m
+//  OnibusView.m
 //  iBafometro
 //
 //  Created by EZEQUIEL FRANCA DOS SANTOS on 16/04/14.
@@ -78,10 +78,10 @@
         double Latitude = [[[[[[jsonDadosUsuario objectForKey:@"results"] objectAtIndex:i] objectForKey:@"geometry"] objectForKey:@"location"] valueForKey:@"lat"] floatValue];
         double Longitude = [[[[[[jsonDadosUsuario objectForKey:@"results"] objectAtIndex:i] objectForKey:@"geometry"] objectForKey:@"location"] valueForKey:@"lng"] floatValue];
         
-        CLLocationCoordinate2D Coordenada_ponto_de_taxi = CLLocationCoordinate2DMake(Latitude, Longitude);
+        CLLocationCoordinate2D Coordenada_ponto_de_onibus = CLLocationCoordinate2DMake(Latitude, Longitude);
         
-        PontosTaxi *ponto_taxi = [[PontosTaxi alloc]initWithTitle:@"Ponto de Taxi" Localizacao:Coordenada_ponto_de_taxi];
-        [self.mapa addAnnotation:ponto_taxi];
+        PontosOnibus *ponto_onibus = [[PontosOnibus alloc]initWithTitle:@"Ponto de Onibus" Localizacao:Coordenada_ponto_de_onibus];
+        [self.mapa addAnnotation:ponto_onibus];
         //NSLog(@"%f, %f", Latitude, Longitude );
     }
     
@@ -124,7 +124,7 @@
     region.center = self.mapa.userLocation.coordinate;
     
     NSString *urlString =
-    [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?location=%f,%f&radius=5000&sensor=false&types=taxi_stand&key=AIzaSyBG-qHUWnj375cRL4ke_Fe4-c_lxQIJrPI", latitude, longitude];
+    [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?location=%f,%f&radius=5000&sensor=false&types=bus_station&key=AIzaSyBG-qHUWnj375cRL4ke_Fe4-c_lxQIJrPI", latitude, longitude];
     [self googlePlaces:urlString];
     //NSLog(@"%@", _teste);
 }
@@ -139,13 +139,13 @@
 
 - (MKAnnotationView*)mapView:(MKMapView*)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
-    if([annotation isKindOfClass:[PontosTaxi class]]) {
+    if([annotation isKindOfClass:[PontosOnibus class]]) {
         
-        PontosTaxi *ponto = (PontosTaxi *)annotation;
-        MKAnnotationView *anotacao = [self.mapa dequeueReusableAnnotationViewWithIdentifier:@"PontosTaxi"];
+        PontosOnibus *ponto = (PontosOnibus *)annotation;
+        MKAnnotationView *anotacao = [self.mapa dequeueReusableAnnotationViewWithIdentifier:@"PontosOnibus"];
         
         if(anotacao == nil) {
-            anotacao = ponto.pontoDeTaxiView;
+            anotacao = ponto.pontoDeOnibusView;
         }else{
             anotacao.annotation = annotation;
         }
@@ -166,31 +166,16 @@
  }
  */
 
-- (IBAction)ligarTaxi1:(id)sender {
+- (IBAction)ligarOnibus1:(id)sender {
     NSLog(@"%f  %f", latitude, longitude);
     [self desenhaPontos];
-    [self ligandoTaxista];
 }
 
-- (IBAction)ligarTaxi2:(id)sender {
+- (IBAction)ligarOnibus2:(id)sender {
     [self desenhaPontos];
-    [self ligandoTaxista];
 }
 
-
-- (void)ligandoTaxista{
-    NSString *numeroTaxista = @"+919876543210";
-    NSURL *telefoneURL = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",numeroTaxista]];
-    
-    if ([[UIApplication sharedApplication] canOpenURL:telefoneURL]) {
-        [[UIApplication sharedApplication] openURL:telefoneURL];
-    } else
-    {
-        NSLog(@"Nao foi possivel fazer sua ligacao");
-    }
-}
-
-#pragma mark Ligaçāo Taxista
+#pragma mark Ligaçāo Onibussta
 
 - (void)didMoveToParentViewController:(UIViewController *)parent{
     [self hideTabBar];
