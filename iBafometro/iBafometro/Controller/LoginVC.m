@@ -8,6 +8,8 @@
 
 #import "LoginVC.h"
 #import "OnibusVC.h"
+#define RGB(r, g, b) [UIColor colorWithRed:(float)r / 255.0 green:(float)g / 255.0 blue:(float)b / 255.0 alpha:1.0]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:(float)r / 255.0 green:(float)g / 255.0 blue:(float)b / 255.0 alpha:a]
 
 @interface LoginVC ()
 
@@ -26,10 +28,36 @@
     //Facebook
     
     FBLoginView *loginview = [[FBLoginView alloc] init];
+//    loginview.frame = CGRectOffset(loginview.frame, 50, 350);
+//    loginview.delegate = self;
+//    [loginview sizeToFit];
+//    loginview.readPermissions = @[@"basic_info", @"email", @"user_likes"];
+//    loginview.backgroundColor = RGB(0, 0, 0);
+
     loginview.frame = CGRectOffset(loginview.frame, 50, 350);
+    for (id obj in loginview.subviews)
+    {
+        if ([obj isKindOfClass:[UIButton class]])
+        {
+            UIButton * loginButton =  obj;
+            UIImage *loginImage = [UIImage imageNamed:@"facebook-login.png"];
+            [loginButton setBackgroundImage:loginImage forState:UIControlStateNormal];
+            [loginButton setBackgroundImage:nil forState:UIControlStateSelected];
+            [loginButton setBackgroundImage:nil forState:UIControlStateHighlighted];
+            [loginButton sizeToFit];
+        }
+//        if ([obj isKindOfClass:[UILabel class]])
+//        {
+//            UILabel * loginLabel =  obj;
+//            loginLabel.text = @"Log in to facebook";
+//           // loginLabel.textAlignment = UITextAlignmentCenter;
+//            loginLabel.frame = CGRectMake(0, 0, 271, 37);
+//        }
+    }
+    
     loginview.delegate = self;
-    [loginview sizeToFit];
-    loginview.readPermissions = @[@"basic_info", @"email", @"user_likes"];
+    
+    
     [self.view addSubview:loginview];
     
 //    self.facebuquis.layer.cornerRadius = 5;

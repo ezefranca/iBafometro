@@ -92,6 +92,7 @@
 		F74460E51901FEE90078A82E /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F74460CE1901FEE90078A82E /* Lato-Regular.ttf */; };
 		F744610F190223680078A82E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F744610E190223680078A82E /* AudioToolbox.framework */; };
 		F74461101902237E0078A82E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7CBDE6418FF6C6000164AD5 /* FacebookSDK.framework */; };
+		F79ECF451909B20A007471E8 /* facebook-login.png in Resources */ = {isa = PBXBuildFile; fileRef = F79ECF441909B20A007471E8 /* facebook-login.png */; };
 		F7A5666B18F8BB6F00B5B20A /* NSString+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A5665718F8BB6F00B5B20A /* NSString+HexColor.m */; };
 		F7AF810918F9DD840078C410 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AF810818F9DD840078C410 /* Twitter.framework */; };
 		F7AF810B18F9DD930078C410 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AF810A18F9DD930078C410 /* Accounts.framework */; };
@@ -275,6 +276,7 @@
 		F74460CD1901FEE90078A82E /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		F74460CE1901FEE90078A82E /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		F744610E190223680078A82E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F79ECF441909B20A007471E8 /* facebook-login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-login.png"; sourceTree = "<group>"; };
 		F7A5665618F8BB6F00B5B20A /* NSString+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HexColor.h"; sourceTree = "<group>"; };
 		F7A5665718F8BB6F00B5B20A /* NSString+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HexColor.m"; sourceTree = "<group>"; };
 		F7A5665818F8BB6F00B5B20A /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
@@ -401,6 +403,7 @@
 		25FCA7771900694400C0AA85 /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				F79ECF441909B20A007471E8 /* facebook-login.png */,
 				F744609E1901EF5A0078A82E /* mussum_luhan.png */,
 				25FCA77B1900694400C0AA85 /* icones */,
 				25FCA7781900694400C0AA85 /* 14169905_s.jpg */,
@@ -840,6 +843,7 @@
 				F74460E31901FEE90078A82E /* Lato-Italic.ttf in Resources */,
 				F74460E41901FEE90078A82E /* Lato-Light.ttf in Resources */,
 				25FCA7961900694400C0AA85 /* rsz_map32.png in Resources */,
+				F79ECF451909B20A007471E8 /* facebook-login.png in Resources */,
 				25FCA7911900694400C0AA85 /* locateButton.png in Resources */,
 				F744609F1901EF5A0078A82E /* mussum_luhan.png in Resources */,
 				F7C3C40F19048C8A00B9FFA3 /* Main_Ipad.storyboard in Resources */,
