@@ -78,6 +78,10 @@
         double Latitude = [[[[[[jsonDadosUsuario objectForKey:@"results"] objectAtIndex:i] objectForKey:@"geometry"] objectForKey:@"location"] valueForKey:@"lat"] floatValue];
         double Longitude = [[[[[[jsonDadosUsuario objectForKey:@"results"] objectAtIndex:i] objectForKey:@"geometry"] objectForKey:@"location"] valueForKey:@"lng"] floatValue];
         
+        NSString *rua = [[[jsonDadosUsuario objectForKey:@"results"]objectAtIndex:i]objectForKey:@"name"];
+        NSLog(@"%@",rua);
+        
+        
         CLLocationCoordinate2D Coordenada_ponto_de_onibus = CLLocationCoordinate2DMake(Latitude, Longitude);
         
         PontosOnibus *ponto_onibus = [[PontosOnibus alloc]initWithTitle:@"Ponto de Onibus" Localizacao:Coordenada_ponto_de_onibus];
@@ -125,6 +129,8 @@
     
     NSString *urlString =
     [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?location=%f,%f&radius=5000&sensor=false&types=bus_station&key=AIzaSyBG-qHUWnj375cRL4ke_Fe4-c_lxQIJrPI", latitude, longitude];
+    
+   // &rankby=distance&types=bus&name=harbour&sensor=false&key
     [self googlePlaces:urlString];
     //NSLog(@"%@", _teste);
 }
@@ -132,9 +138,10 @@
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
     CLLocationCoordinate2D usuario = userLocation.location.coordinate;
-    MKCoordinateRegion centroDoMapa = MKCoordinateRegionMakeWithDistance(usuario, 500, 500);
-    
+    MKCoordinateRegion centroDoMapa = MKCoordinateRegionMakeWithDistance(usuario, 2000, 2000);
+    NSLog(@"centralizando");
     [self.mapa setRegion:centroDoMapa];
+    
 }
 
 - (MKAnnotationView*)mapView:(MKMapView*)mapView viewForAnnotation:(id<MKAnnotation>)annotation

@@ -66,6 +66,7 @@
 
 
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
+    
     //O objeto user recebe o nome e a foto de perfil (id)
     self.picture.profileID = user.id;
     self.name.text = user.name;
