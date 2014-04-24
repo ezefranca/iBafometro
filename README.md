@@ -4,6 +4,9 @@ Bafometris
 
 Projeto desenvolvolvido no Bepid - (Brazilian Education Program for iOS Development) no SENAC-SP.
 
+###Bafômetro Arduino - iOS
+![](https://raw.githubusercontent.com/ezefranca/iBafometro/master/iBafometro/arduino/bafometro.png)
+
 Sobre
 ======
 
