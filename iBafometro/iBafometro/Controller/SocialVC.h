@@ -22,7 +22,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *shareLinkWithShareDialog;
 @property (weak, nonatomic) IBOutlet UIButton *postStatusUpdateWithShareDialog;
 
-@property (strong, nonatomic) IBOutlet UIImageView *testeParanaue;
 
 @property (weak, nonatomic) IBOutlet UIButton *ShareLinkWithAPICalls;
 @property (weak, nonatomic) IBOutlet UIButton *StatusUpdateWithAPICalls;

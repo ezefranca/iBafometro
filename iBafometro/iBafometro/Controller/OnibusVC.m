@@ -7,6 +7,7 @@
 //
 
 #import "OnibusVC.h"
+#import "APIOlhoVivo.h"
 
 @interface OnibusVC ()
 
@@ -65,27 +66,36 @@
                                              options:NSJSONReadingMutableContainers
                                              error:&error];
     
-    NSLog(@"%@", jsonDadosUsuario);
+    NSArray *keys = [jsonDadosUsuario allKeys];
+    id aKey = [keys objectAtIndex:1];
+    NSString *status = [jsonDadosUsuario objectForKey:aKey];
     
+    aKey = [keys objectAtIndex:0];
+    NSString *rua = [[[jsonDadosUsuario objectForKey:aKey]objectAtIndex:0]objectForKey:@"formatted_address"];
+    
+    NSLog(@"%@\n %@", status, rua);
+    
+    APIOlhoVivo *sptrans = [[APIOlhoVivo alloc]init];
+    [sptrans viewDidLoad];
     //    for (NSString *string in myArray)
     //    {
     //        // do stuff...
     //    }
     
     
-    for (int i = 0; i < [[jsonDadosUsuario objectForKey:@"results"] count]; i++)
+   // for (int i = 0; i < [[jsonDadosUsuario objectForKey:@"results"] count]; i++)
     {
-        double Latitude = [[[[[[jsonDadosUsuario objectForKey:@"results"] objectAtIndex:i] objectForKey:@"geometry"] objectForKey:@"location"] valueForKey:@"lat"] floatValue];
-        double Longitude = [[[[[[jsonDadosUsuario objectForKey:@"results"] objectAtIndex:i] objectForKey:@"geometry"] objectForKey:@"location"] valueForKey:@"lng"] floatValue];
+       // double Latitude = [[[[[[jsonDadosUsuario objectForKey:@"results"] objectAtIndex:i] objectForKey:@"geometry"] objectForKey:@"location"] valueForKey:@"lat"] floatValue];
+       // double Longitude = [[[[[[jsonDadosUsuario objectForKey:@"results"] objectAtIndex:i] objectForKey:@"geometry"] objectForKey:@"location"] valueForKey:@"lng"] floatValue];
         
-        NSString *rua = [[[jsonDadosUsuario objectForKey:@"results"]objectAtIndex:i]objectForKey:@"name"];
-        NSLog(@"%@",rua);
+       // NSString *rua = [[[jsonDadosUsuario objectForKey:@"results"]objectAtIndex:i]objectForKey:@"name"];
+       // NSLog(@"%@",rua);
         
         
-        CLLocationCoordinate2D Coordenada_ponto_de_onibus = CLLocationCoordinate2DMake(Latitude, Longitude);
+        //CLLocationCoordinate2D Coordenada_ponto_de_onibus = CLLocationCoordinate2DMake(Latitude, Longitude);
         
-        PontosOnibus *ponto_onibus = [[PontosOnibus alloc]initWithTitle:@"Ponto de Onibus" Localizacao:Coordenada_ponto_de_onibus];
-        [self.mapa addAnnotation:ponto_onibus];
+        //PontosOnibus *ponto_onibus = [[PontosOnibus alloc]initWithTitle:rua Localizacao:Coordenada_ponto_de_onibus];
+       // [self.mapa addAnnotation:ponto_onibus];
         //NSLog(@"%f, %f", Latitude, Longitude );
     }
     
@@ -126,10 +136,14 @@
 - (void)desenhaPontos{
     MKCoordinateRegion region;
     region.center = self.mapa.userLocation.coordinate;
+    NSString *urlString = [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?latlng=%f,%f&sensor=false",latitude, longitude];
+    //NSString *urlString = [NSString stringWithFormat:@"http://www.cruzalinhas.com/linhasquepassam.json?lat=%f&lng=%f", latitude, longitude];
     
-    NSString *urlString =
-    [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?location=%f,%f&radius=5000&sensor=false&types=bus_station&key=AIzaSyBG-qHUWnj375cRL4ke_Fe4-c_lxQIJrPI", latitude, longitude];
     
+    //[NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?location=%f,%f&radius=5000&sensor=false&types=bus_station&key=AIzaSyBG-qHUWnj375cRL4ke_Fe4-c_lxQIJrPI", latitude, longitude];
+    
+    
+    NSLog(@"%@", urlString);
    // &rankby=distance&types=bus&name=harbour&sensor=false&key
     [self googlePlaces:urlString];
     //NSLog(@"%@", _teste);

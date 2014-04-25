@@ -42,6 +42,7 @@
 		25FCA79C1900694400C0AA85 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 25FCA78A1900694400C0AA85 /* Spaceship.png */; };
 		25FCA7A41900739800C0AA85 /* DTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FCA7A11900739800C0AA85 /* DTAlertView.m */; };
 		25FCA7A51900739800C0AA85 /* DTProgressStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FCA7A31900739800C0AA85 /* DTProgressStatus.m */; };
+		F70A7BA8190ABF5000514AF9 /* APIOlhoVivo.m in Sources */ = {isa = PBXBuildFile; fileRef = F70A7BA7190ABF5000514AF9 /* APIOlhoVivo.m */; };
 		F70D6E8E18F8A99000238937 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70D6E8D18F8A99000238937 /* Foundation.framework */; };
 		F70D6E9018F8A99000238937 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70D6E8F18F8A99000238937 /* CoreGraphics.framework */; };
 		F70D6E9218F8A99000238937 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70D6E9118F8A99000238937 /* UIKit.framework */; };
@@ -192,6 +193,8 @@
 		25FCA7A11900739800C0AA85 /* DTAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTAlertView.m; sourceTree = "<group>"; };
 		25FCA7A21900739800C0AA85 /* DTProgressStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTProgressStatus.h; sourceTree = "<group>"; };
 		25FCA7A31900739800C0AA85 /* DTProgressStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTProgressStatus.m; sourceTree = "<group>"; };
+		F70A7BA6190ABF5000514AF9 /* APIOlhoVivo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIOlhoVivo.h; path = SPTrans/APIOlhoVivo.h; sourceTree = "<group>"; };
+		F70A7BA7190ABF5000514AF9 /* APIOlhoVivo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIOlhoVivo.m; path = SPTrans/APIOlhoVivo.m; sourceTree = "<group>"; };
 		F70D6E8A18F8A99000238937 /* iBafometro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBafometro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70D6E8D18F8A99000238937 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F70D6E8F18F8A99000238937 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -458,6 +461,24 @@
 			path = DTAlertView;
 			sourceTree = "<group>";
 		};
+		F70A7BA4190ABF2700514AF9 /* PontosTaxi */ = {
+			isa = PBXGroup;
+			children = (
+				254BE57D1908345600E0CB89 /* PontosTaxi.h */,
+				254BE57E1908345600E0CB89 /* PontosTaxi.m */,
+			);
+			name = PontosTaxi;
+			sourceTree = "<group>";
+		};
+		F70A7BA5190ABF3D00514AF9 /* SPTrans */ = {
+			isa = PBXGroup;
+			children = (
+				F70A7BA6190ABF5000514AF9 /* APIOlhoVivo.h */,
+				F70A7BA7190ABF5000514AF9 /* APIOlhoVivo.m */,
+			);
+			name = SPTrans;
+			sourceTree = "<group>";
+		};
 		F70D6E8118F8A99000238937 = {
 			isa = PBXGroup;
 			children = (
@@ -661,6 +682,8 @@
 		F7A5665418F8BB6F00B5B20A /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				F70A7BA5190ABF3D00514AF9 /* SPTrans */,
+				F70A7BA4190ABF2700514AF9 /* PontosTaxi */,
 				F74460A01901FEE90078A82E /* FlatUIkit */,
 				F744609A1901E8140078A82E /* Bafometro */,
 				F74460961901E8070078A82E /* PontosOnibus */,
@@ -669,8 +692,6 @@
 				F7AF817018FA2A4D0078C410 /* SoftModem */,
 				F7AF815018FA264E0078C410 /* PNChart */,
 				F7A5665518F8BB6F00B5B20A /* FK */,
-				254BE57D1908345600E0CB89 /* PontosTaxi.h */,
-				254BE57E1908345600E0CB89 /* PontosTaxi.m */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -921,6 +942,7 @@
 				F74460E01901FEE90078A82E /* UITableViewCell+FlatUI.m in Sources */,
 				F7A5666B18F8BB6F00B5B20A /* NSString+HexColor.m in Sources */,
 				25FCA7741900693A00C0AA85 /* SocialVC.m in Sources */,
+				F70A7BA8190ABF5000514AF9 /* APIOlhoVivo.m in Sources */,
 				F7AF818518FA2A4D0078C410 /* FSKRecognizer.mm in Sources */,
 				F74460D31901FEE90078A82E /* FUISegmentedControl.m in Sources */,
 				F74460D61901FEE90078A82E /* UIBarButtonItem+FlatUI.m in Sources */,

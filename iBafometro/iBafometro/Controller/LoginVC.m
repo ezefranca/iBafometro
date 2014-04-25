@@ -54,7 +54,12 @@
 //            loginLabel.frame = CGRectMake(0, 0, 271, 37);
 //        }
     }
-    
+    //Deixar borda redonda
+    CGRect x = loginview.bounds;
+    loginview.layer.cornerRadius = CGRectGetHeight(x) / 5;
+    loginview.layer.borderWidth = 1.0f;
+    loginview.layer.borderColor = [UIColor clearColor].CGColor;
+    loginview.clipsToBounds = YES;
     loginview.delegate = self;
     
     
