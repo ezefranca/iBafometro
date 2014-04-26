@@ -1,21 +1,20 @@
 //
-//  ViewController.h
-//  teste-sptrans
+//  AmigosView.m
+//  iBafometro
 //
-//  Created by Ezequiel Franca dos Santos on 12/04/14.
+//  Created by EZEQUIEL FRANCA DOS SANTOS on 16/04/14.
 //  Copyright (c) 2014 Ezequiel Franca dos Santos. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface APIOlhoVivo : UIViewController <NSURLConnectionDelegate>
+@interface APIOlhoVivo : NSObject <NSURLConnectionDelegate>
 {
-    NSMutableArray *catalogo;
-    NSMutableArray *track;
     NSData *jsonDados;
-    
 }
 
 @property NSString *token;
+- (id)initWithToken:(NSString *)seuToken;
+-(NSMutableDictionary *)busca:(NSString *)termosDaBusca comOtermo:(NSString *)tipoDeBusca;
 
 @end

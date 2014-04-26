@@ -14,6 +14,7 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "PontosOnibus.h"
+#import "APIOlhoVivo.h"
 #import "MapaVC.h"
 
 @interface OnibusVC : UIViewController <MKMapViewDelegate, MKAnnotation, CLLocationManagerDelegate>
@@ -21,6 +22,7 @@
     NSData *jsonDados;
     double latitude;
     double longitude;
+    APIOlhoVivo *olhoVivo;
 }
 - (IBAction)ligarOnibus1:(id)sender;
 - (IBAction)ligarOnibus2:(id)sender;

@@ -29,6 +29,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    olhoVivo = [[APIOlhoVivo alloc]initWithToken:@"67542d68a9ba2751de039bd09dd42473e1d6e51cbdc49ebfec2bc4d52fc32102"];
+    
     self.mapa.delegate = self;
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
@@ -73,10 +76,14 @@
     aKey = [keys objectAtIndex:0];
     NSString *rua = [[[jsonDadosUsuario objectForKey:aKey]objectAtIndex:0]objectForKey:@"formatted_address"];
     
-    NSLog(@"%@\n %@", status, rua);
+    NSArray *nomedaRuaSeparado = [rua componentsSeparatedByString:@" "];
+    NSString *buscarRua = [nomedaRuaSeparado objectAtIndex:3]; //word3
     
-    APIOlhoVivo *sptrans = [[APIOlhoVivo alloc]init];
-    [sptrans viewDidLoad];
+    NSLog(@"%@\n %@", buscarRua, rua);
+    
+
+    NSMutableDictionary *resultados = [olhoVivo busca:buscarRua comOtermo:@"Parada"];
+    NSLog(@"%@", resultados);
     //    for (NSString *string in myArray)
     //    {
     //        // do stuff...
