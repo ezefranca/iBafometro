@@ -26,3 +26,5 @@ Resources
 Credits:
 
 Icons for maps: [mapIcons](http://mapicons.nicolasmollet.com/)
+FSK library
+FlatUIKit
