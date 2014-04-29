@@ -14,8 +14,8 @@
 
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, copy) NSString *title;
-//@property (nonatomic, copy) NSString *subtitulo;
-//@property (nonatomic, copy) NSString *tag;
+@property (nonatomic, copy) NSString *subtitulo;
+@property int tag;
 
 - (id)initWithTitle:(NSString *)Titulo Localizacao:(CLLocationCoordinate2D)aCordenada;
 - (MKAnnotationView*) pontoDeOnibusView;

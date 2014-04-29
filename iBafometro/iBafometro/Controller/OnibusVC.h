@@ -30,4 +30,13 @@
 
 -(void)desenhaPontos;
 
+@property (strong, nonatomic) IBOutlet UIView *detalhes;
+@property (strong, nonatomic) IBOutlet UILabel *label1;
+@property (strong, nonatomic) IBOutlet UILabel *label2;
+@property (strong, nonatomic) IBOutlet UILabel *label3;
+@property (strong, nonatomic) IBOutlet UILabel *label4;
+- (IBAction)fechaDetalhes:(id)sender;
+
+
+
 @end

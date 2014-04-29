@@ -15,6 +15,6 @@
 
 @property NSString *token;
 - (id)initWithToken:(NSString *)seuToken;
--(NSMutableDictionary *)busca:(NSString *)termosDaBusca comOtermo:(NSString *)tipoDeBusca;
+-(NSMutableArray *)busca:(NSString *)termosDaBusca comOtermo:(NSString *)tipoDeBusca;
 
 @end

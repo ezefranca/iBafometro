@@ -46,7 +46,7 @@
 #pragma mark Consulta API Olho vivo
 // Veja a documentacao com os tipos de busca
 
--(NSMutableDictionary *)busca:(NSString *)termosDaBusca comOtermo:(NSString *)tipoDeBusca{
+-(NSMutableArray *)busca:(NSString *)termosDaBusca comOtermo:(NSString *)tipoDeBusca{
     
     NSString *strURL = [NSString stringWithFormat:@"http://api.olhovivo.sptrans.com.br/v0/%@/Buscar?termosBusca=%@",tipoDeBusca, termosDaBusca];
     NSURL *url = [NSURL URLWithString: strURL];
@@ -66,7 +66,7 @@
     else{
         //NSLog(@"Tudo certo, go go gerar o JSON");
         NSError *error;
-        NSMutableDictionary *jsonDadosUsuario = [NSJSONSerialization
+        NSMutableArray *jsonDadosUsuario = [NSJSONSerialization
                                                  JSONObjectWithData:ResponseData
                                                  options:NSJSONReadingMutableContainers
                                                  error:&error];

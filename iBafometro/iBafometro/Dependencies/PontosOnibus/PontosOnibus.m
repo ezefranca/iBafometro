@@ -27,11 +27,11 @@
 
 -(MKAnnotationView *)pontoDeOnibusView{
     MKAnnotationView *ponto_onibus = [[MKAnnotationView alloc]initWithAnnotation:self reuseIdentifier:@"PontosOnibus"];
-    
+
     ponto_onibus.enabled = YES;
     ponto_onibus.canShowCallout = YES;
     ponto_onibus.image = [UIImage imageNamed:@"busstop.png"];
-    ponto_onibus.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    ponto_onibus.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeInfoDark];
     
     return ponto_onibus;
     

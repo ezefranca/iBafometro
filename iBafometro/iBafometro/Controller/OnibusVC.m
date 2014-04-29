@@ -15,6 +15,7 @@
 
 @implementation OnibusVC{
     CLLocationManager *locationManager;
+    NSMutableArray *resultados;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -79,31 +80,38 @@
     NSArray *nomedaRuaSeparado = [rua componentsSeparatedByString:@" "];
     NSString *buscarRua = [nomedaRuaSeparado objectAtIndex:3]; //word3
     
-    NSLog(@"%@\n %@", buscarRua, rua);
+    //NSLog(@"%@\n %@", buscarRua, rua);
     
 
-    NSMutableDictionary *resultados = [olhoVivo busca:buscarRua comOtermo:@"Parada"];
+    resultados = [olhoVivo busca:buscarRua comOtermo:@"Parada"];
     NSLog(@"%@", resultados);
     //    for (NSString *string in myArray)
     //    {
     //        // do stuff...
     //    }
     
+    float Latitude = [[[resultados objectAtIndex:0]objectForKey:@"Latitude"]floatValue];
+    NSLog(@"--------%f", Latitude);
     
-   // for (int i = 0; i < [[jsonDadosUsuario objectForKey:@"results"] count]; i++)
+    for (int i = 0; i < [resultados count]; i++)
     {
-       // double Latitude = [[[[[[jsonDadosUsuario objectForKey:@"results"] objectAtIndex:i] objectForKey:@"geometry"] objectForKey:@"location"] valueForKey:@"lat"] floatValue];
-       // double Longitude = [[[[[[jsonDadosUsuario objectForKey:@"results"] objectAtIndex:i] objectForKey:@"geometry"] objectForKey:@"location"] valueForKey:@"lng"] floatValue];
         
-       // NSString *rua = [[[jsonDadosUsuario objectForKey:@"results"]objectAtIndex:i]objectForKey:@"name"];
-       // NSLog(@"%@",rua);
+        float Latitude = [[[resultados objectAtIndex:i]objectForKey:@"Latitude"]floatValue];
+        float Longitude = [[[resultados objectAtIndex:i]objectForKey:@"Longitude"]floatValue];
+//        double Latitude = [[[[[[jsonDadosUsuario objectForKey:@"results"] objectAtIndex:i] objectForKey:@"geometry"] objectForKey:@"location"] valueForKey:@"lat"] floatValue];
+//        double Longitude = [[[[[[jsonDadosUsuario objectForKey:@"results"] objectAtIndex:i] objectForKey:@"geometry"] objectForKey:@"location"] valueForKey:@"lng"] floatValue];
+        
+        NSString *Endereco = [[resultados objectAtIndex:i]objectForKey:@"Endereco"];
+        NSLog(@"RUA XXX %@", Endereco);
         
         
-        //CLLocationCoordinate2D Coordenada_ponto_de_onibus = CLLocationCoordinate2DMake(Latitude, Longitude);
+        CLLocationCoordinate2D Coordenada_ponto_de_onibus = CLLocationCoordinate2DMake(Latitude, Longitude);
         
-        //PontosOnibus *ponto_onibus = [[PontosOnibus alloc]initWithTitle:rua Localizacao:Coordenada_ponto_de_onibus];
-       // [self.mapa addAnnotation:ponto_onibus];
-        //NSLog(@"%f, %f", Latitude, Longitude );
+        PontosOnibus *ponto_onibus = [[PontosOnibus alloc]initWithTitle:Endereco Localizacao:Coordenada_ponto_de_onibus];
+        ponto_onibus.title = @"Ver Detalhes";
+        ponto_onibus.tag = i;
+        [self.mapa addAnnotation:ponto_onibus];
+        NSLog(@"%f, %f", Latitude, Longitude );
     }
     
     
@@ -194,9 +202,49 @@
  }
  */
 
-- (IBAction)ligarOnibus1:(id)sender {
-    NSLog(@"%f  %f", latitude, longitude);
-    [self desenhaPontos];
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+
+{
+    
+    // here we illustrate how to detect which annotation type was clicked on for its callout
+    
+    id <MKAnnotation> annotation = [view annotation];
+    
+    if ([annotation isKindOfClass:[PontosOnibus class]])
+        
+    {
+        CGRect x = self.detalhes.bounds;
+        self.detalhes.layer.cornerRadius = CGRectGetHeight(x) / 5;
+        self.detalhes.layer.borderWidth = 1.0f;
+        self.detalhes.layer.borderColor = [UIColor clearColor].CGColor;
+        self.detalhes.clipsToBounds = YES;
+        
+        PontosOnibus *new = annotation;
+        NSString *Endereco = [[resultados objectAtIndex:new.tag]objectForKey:@"Endereco"];
+        NSString *CodigoParada = [[resultados objectAtIndex:new.tag]objectForKey:@"CodigoParada"];
+        NSString *Nome = [[resultados objectAtIndex:new.tag]objectForKey:@"Nome"];
+        NSLog(@"RUA CLICADA %@", Endereco);
+        
+        self.label1.text = [NSString stringWithFormat:@"Código da Parada: %@", CodigoParada];
+        self.label2.text = Nome;
+        self.label3.text = Endereco;
+        self.detalhes.alpha = 1;
+        [[self view]addSubview:self.detalhes];
+        NSLog(@"clicked Golden Gate Bridge annotation");
+        
+//        CodigoParada = 700016618;
+//        Endereco = "R JAVAES/ R SERGIO TOMAS";
+//        Latitude = "-23.523692";
+//        Longitude = "-46.650278";
+//        Nome = "SERGIO TOMAS B/C";
+        
+    }
+    
+    
+    
+   // [self.navigationController pushViewController:self.d animated:YES];
+    
 }
 
 - (IBAction)ligarOnibus2:(id)sender {
@@ -245,5 +293,9 @@
     // 2
     
     
+}
+- (IBAction)fechaDetalhes:(id)sender {
+    self.detalhes.alpha = 0;
+    //[self.detalhes removeFromSuperview];
 }
 @end
