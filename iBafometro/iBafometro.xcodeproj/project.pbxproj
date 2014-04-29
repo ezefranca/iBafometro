@@ -127,6 +127,10 @@
 		F7C3C4091903C9E200B9FFA3 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C3C3FF1903C9D700B9FFA3 /* iTunesArtwork@2x.png */; };
 		F7C3C40B19042FE100B9FFA3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C3C40A19042FE100B9FFA3 /* AVFoundation.framework */; };
 		F7C3C40F19048C8A00B9FFA3 /* Main_Ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C3C40E19048C8A00B9FFA3 /* Main_Ipad.storyboard */; };
+		F7EFB5FF190F2D7A0054CDA5 /* amigos.png in Resources */ = {isa = PBXBuildFile; fileRef = F7EFB5FC190F2D7A0054CDA5 /* amigos.png */; };
+		F7EFB600190F2D7A0054CDA5 /* onibus.png in Resources */ = {isa = PBXBuildFile; fileRef = F7EFB5FD190F2D7A0054CDA5 /* onibus.png */; };
+		F7EFB603190F2DBB0054CDA5 /* taxiz.png in Resources */ = {isa = PBXBuildFile; fileRef = F7EFB602190F2DBB0054CDA5 /* taxiz.png */; };
+		F7EFB605190F34830054CDA5 /* bafometro.png in Resources */ = {isa = PBXBuildFile; fileRef = F7EFB604190F34830054CDA5 /* bafometro.png */; };
 		F7FE5EAF190633FB00B1DDF1 /* id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = F7FE5EAB190633FB00B1DDF1 /* id-card.png */; };
 		F7FE5EB0190633FB00B1DDF1 /* map-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = F7FE5EAC190633FB00B1DDF1 /* map-pin.png */; };
 		F7FE5EB1190633FB00B1DDF1 /* spiral.png in Resources */ = {isa = PBXBuildFile; fileRef = F7FE5EAD190633FB00B1DDF1 /* spiral.png */; };
@@ -333,6 +337,10 @@
 		F7C3C40A19042FE100B9FFA3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F7C3C40E19048C8A00B9FFA3 /* Main_Ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_Ipad.storyboard; sourceTree = "<group>"; };
 		F7CBDE6418FF6C6000164AD5 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		F7EFB5FC190F2D7A0054CDA5 /* amigos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amigos.png; sourceTree = "<group>"; };
+		F7EFB5FD190F2D7A0054CDA5 /* onibus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onibus.png; sourceTree = "<group>"; };
+		F7EFB602190F2DBB0054CDA5 /* taxiz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taxiz.png; sourceTree = "<group>"; };
+		F7EFB604190F34830054CDA5 /* bafometro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bafometro.png; sourceTree = "<group>"; };
 		F7FE5EAB190633FB00B1DDF1 /* id-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "id-card.png"; sourceTree = "<group>"; };
 		F7FE5EAC190633FB00B1DDF1 /* map-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-pin.png"; sourceTree = "<group>"; };
 		F7FE5EAD190633FB00B1DDF1 /* spiral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spiral.png; sourceTree = "<group>"; };
@@ -406,6 +414,7 @@
 		25FCA7771900694400C0AA85 /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				F7EFB604190F34830054CDA5 /* bafometro.png */,
 				F79ECF441909B20A007471E8 /* facebook-login.png */,
 				F744609E1901EF5A0078A82E /* mussum_luhan.png */,
 				25FCA77B1900694400C0AA85 /* icones */,
@@ -709,6 +718,7 @@
 		F7AF809318F9A8BB0078C410 /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				F7EFB5FB190F2D7A0054CDA5 /* interface */,
 				25FCA7771900694400C0AA85 /* Imagens */,
 			);
 			path = Imagens;
@@ -770,6 +780,16 @@
 			children = (
 			);
 			name = iPad;
+			sourceTree = "<group>";
+		};
+		F7EFB5FB190F2D7A0054CDA5 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				F7EFB5FC190F2D7A0054CDA5 /* amigos.png */,
+				F7EFB5FD190F2D7A0054CDA5 /* onibus.png */,
+				F7EFB602190F2DBB0054CDA5 /* taxiz.png */,
+			);
+			path = interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -866,6 +886,8 @@
 				25FCA7961900694400C0AA85 /* rsz_map32.png in Resources */,
 				F79ECF451909B20A007471E8 /* facebook-login.png in Resources */,
 				25FCA7911900694400C0AA85 /* locateButton.png in Resources */,
+				F7EFB605190F34830054CDA5 /* bafometro.png in Resources */,
+				F7EFB603190F2DBB0054CDA5 /* taxiz.png in Resources */,
 				F744609F1901EF5A0078A82E /* mussum_luhan.png in Resources */,
 				F7C3C40F19048C8A00B9FFA3 /* Main_Ipad.storyboard in Resources */,
 				25FCA7981900694400C0AA85 /* telephone45.png in Resources */,
@@ -892,9 +914,11 @@
 				25FCA7951900694400C0AA85 /* map32.png in Resources */,
 				25FCA7931900694400C0AA85 /* location.png in Resources */,
 				F70D6E9818F8A99000238937 /* InfoPlist.strings in Resources */,
+				F7EFB5FF190F2D7A0054CDA5 /* amigos.png in Resources */,
 				25FCA78D1900694400C0AA85 /* dologo.png in Resources */,
 				25FCA78F1900694400C0AA85 /* facebook24.png in Resources */,
 				25FCA79A1900694400C0AA85 /* unhealthy.png in Resources */,
+				F7EFB600190F2D7A0054CDA5 /* onibus.png in Resources */,
 				F7FE5EB0190633FB00B1DDF1 /* map-pin.png in Resources */,
 				F7C3C4031903C9D700B9FFA3 /* Icon-Small@2x.png in Resources */,
 				25FCA7971900694400C0AA85 /* taxi1.png in Resources */,

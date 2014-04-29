@@ -35,25 +35,25 @@
 //    loginview.backgroundColor = RGB(0, 0, 0);
 
     loginview.frame = CGRectOffset(loginview.frame, 50, 350);
-    for (id obj in loginview.subviews)
-    {
-        if ([obj isKindOfClass:[UIButton class]])
-        {
-            UIButton * loginButton =  obj;
-            UIImage *loginImage = [UIImage imageNamed:@"facebook-login.png"];
-            [loginButton setBackgroundImage:loginImage forState:UIControlStateNormal];
-            [loginButton setBackgroundImage:nil forState:UIControlStateSelected];
-            [loginButton setBackgroundImage:nil forState:UIControlStateHighlighted];
-            [loginButton sizeToFit];
-        }
-//        if ([obj isKindOfClass:[UILabel class]])
+//    for (id obj in loginview.subviews)
+//    {
+//        if ([obj isKindOfClass:[UIButton class]])
 //        {
-//            UILabel * loginLabel =  obj;
-//            loginLabel.text = @"Log in to facebook";
-//           // loginLabel.textAlignment = UITextAlignmentCenter;
-//            loginLabel.frame = CGRectMake(0, 0, 271, 37);
+//            UIButton * loginButton =  obj;
+//            UIImage *loginImage = [UIImage imageNamed:@"facebook-login.png"];
+//            [loginButton setBackgroundImage:loginImage forState:UIControlStateNormal];
+//            [loginButton setBackgroundImage:nil forState:UIControlStateSelected];
+//            [loginButton setBackgroundImage:nil forState:UIControlStateHighlighted];
+//            [loginButton sizeToFit];
 //        }
-    }
+////        if ([obj isKindOfClass:[UILabel class]])
+////        {
+////            UILabel * loginLabel =  obj;
+////            loginLabel.text = @"Log in to facebook";
+////           // loginLabel.textAlignment = UITextAlignmentCenter;
+////            loginLabel.frame = CGRectMake(0, 0, 271, 37);
+////        }
+//    }
     //Deixar borda redonda
     CGRect x = loginview.bounds;
     loginview.layer.cornerRadius = CGRectGetHeight(x) / 5;

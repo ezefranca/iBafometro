@@ -70,15 +70,15 @@
     self.annotatedGauge.minValue = 0;
     self.annotatedGauge.maxValue = 100;
     self.annotatedGauge.titleLabel.text = @"Bafometris";
-    self.annotatedGauge.titleLabel.textColor = RGB(0, 0, 0);
+    self.annotatedGauge.titleLabel.textColor = RGB(255, 255, 255);
     self.annotatedGauge.startRangeLabel.text = @"0";
-    self.annotatedGauge.startRangeLabel.textColor = RGB(0, 0, 0);
+    self.annotatedGauge.startRangeLabel.textColor = RGB(255, 255, 255);
     self.annotatedGauge.endRangeLabel.text = @"100";
-    self.annotatedGauge.endRangeLabel.textColor = RGB(0, 0, 0);
+    self.annotatedGauge.endRangeLabel.textColor = RGB(255, 255, 255);
     //self.annotatedGauge.fillArcFillColor = [UIColor colorWithRed:.41 green:.76 blue:.73 alpha:1];
     //self.annotatedGauge.fillArcStrokeColor = [UIColor colorWithRed:.41 green:.76 blue:.73 alpha:1];
     self.annotatedGauge.value = 30;
-    self.annotatedGauge.backgroundColor = RGB(26, 188, 156);
+    self.annotatedGauge.backgroundColor = RGB(51, 99, 172);
     [self.view addSubview:self.annotatedGauge];
     
     self.gauges = @[self.annotatedGauge];
