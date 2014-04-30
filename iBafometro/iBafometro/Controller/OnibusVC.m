@@ -8,6 +8,8 @@
 
 #import "OnibusVC.h"
 #import "APIOlhoVivo.h"
+#define RGB(r, g, b) [UIColor colorWithRed:(float)r / 255.0 green:(float)g / 255.0 blue:(float)b / 255.0 alpha:1.0]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:(float)r / 255.0 green:(float)g / 255.0 blue:(float)b / 255.0 alpha:a]
 
 @interface OnibusVC ()
 
@@ -17,6 +19,13 @@
     CLLocationManager *locationManager;
     NSMutableArray *resultados;
 }
+@synthesize mapa;
+@synthesize timer;
+@synthesize detalhes;
+@synthesize label1;
+@synthesize label2;
+@synthesize label3;
+@synthesize label4;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -72,7 +81,7 @@
     
     NSArray *keys = [jsonDadosUsuario allKeys];
     id aKey = [keys objectAtIndex:1];
-    NSString *status = [jsonDadosUsuario objectForKey:aKey];
+    //NSString *status = [jsonDadosUsuario objectForKey:aKey];
     
     aKey = [keys objectAtIndex:0];
     NSString *rua = [[[jsonDadosUsuario objectForKey:aKey]objectAtIndex:0]objectForKey:@"formatted_address"];
@@ -114,6 +123,11 @@
         NSLog(@"%f, %f", Latitude, Longitude );
     }
     
+#pragma mark - Mata a Thread
+    
+    [self.timer invalidate];
+    self.timer = nil;
+    
     
 }
 
@@ -133,8 +147,8 @@
     CLLocation *currentLocation = newLocation;
     
     if (currentLocation != nil) {
-        longitude = currentLocation.coordinate.longitude;
-        latitude  = currentLocation.coordinate.latitude;
+        _longitude = currentLocation.coordinate.longitude;
+        _latitude  = currentLocation.coordinate.latitude;
     }
 }
 
@@ -151,7 +165,7 @@
 - (void)desenhaPontos{
     MKCoordinateRegion region;
     region.center = self.mapa.userLocation.coordinate;
-    NSString *urlString = [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?latlng=%f,%f&sensor=false",latitude, longitude];
+    NSString *urlString = [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?latlng=%f,%f&sensor=false",_latitude, _longitude];
     //NSString *urlString = [NSString stringWithFormat:@"http://www.cruzalinhas.com/linhasquepassam.json?lat=%f&lng=%f", latitude, longitude];
     
     
@@ -248,7 +262,21 @@
 }
 
 - (IBAction)ligarOnibus2:(id)sender {
-    [self desenhaPontos];
+    FUIAlertView *alertView = [[FUIAlertView alloc] initWithTitle:@"Carregando Pontos..." message:@"Clique no icone do ponto para mais detalhes..." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    alertView.delegate = self;
+    alertView.titleLabel.textColor = [UIColor cloudsColor];
+    alertView.titleLabel.font = [UIFont boldFlatFontOfSize:16];
+    alertView.messageLabel.textColor = [UIColor cloudsColor];
+    alertView.messageLabel.font = [UIFont flatFontOfSize:14];
+    alertView.backgroundOverlay.backgroundColor = [[UIColor cloudsColor] colorWithAlphaComponent:0.8];
+    alertView.alertContainer.backgroundColor = RGB(51, 99, 172);
+    alertView.defaultButtonColor = [UIColor cloudsColor];
+    alertView.defaultButtonShadowColor = [UIColor asbestosColor];
+    alertView.defaultButtonFont = [UIFont boldFlatFontOfSize:16];
+    alertView.defaultButtonTitleColor = [UIColor asbestosColor];
+    [alertView show];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(desenhaPontos) userInfo:nil repeats:YES];
+    
 }
 
 #pragma mark Ligaçāo Onibussta

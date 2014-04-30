@@ -8,8 +8,14 @@
 
 #import "AmigosVC.h"
 #import "SocialVC.h"
+#import "OnibusVC.h"
+#define RGB(r, g, b) [UIColor colorWithRed:(float)r / 255.0 green:(float)g / 255.0 blue:(float)b / 255.0 alpha:1.0]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:(float)r / 255.0 green:(float)g / 255.0 blue:(float)b / 255.0 alpha:a]
 
-@interface AmigosVC ()
+@interface AmigosVC (){
+    OnibusVC *o;
+    FUIAlertView *alertView;
+}
 
 @end
 
@@ -211,17 +217,16 @@
 
 - (void)makeRequestToShareLink {
     
-    // NOTE: pre-filling fields associated with Facebook posts,
-    // unless the user manually generated the content earlier in the workflow of your app,
-    // can be against the Platform policies: https://developers.facebook.com/policy
     
-    // Put together the dialog parameters
+    
+    NSString *googleMapsURL = [NSString stringWithFormat:@"https://www.google.com.br/maps/place/@%f,@%f/data=!3m1!4b1!4m2!3m1!1s0x0:0x0", o.latitude, o.longitude];
+    
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    @"Me ajude - Carona ou me busque", @"name",
                                    @"Acabei bebendo um pouco e preciso de ajuda!.", @"caption",
                                    @"Clique no link e veja minha localização!", @"description",
-                                   @"https://www.google.com.br/maps/place/Bar+do+Alem%C3%A3o+de+S%C3%A3o+Paulo+em+Moema/@-23.6824124,-46.5952992,10z/data=!4m5!1m2!2m1!1sbar+do+alemao!3m1!1s0x94ce5a04c0898463:0xc659c5e8a48566b", @"link",
-                                   @"http://googlediscovery.com/wp-content/uploads/google-maps-transito3.jpg", @"picture",
+                                   googleMapsURL, @"link",
+                                   googleMapsURL, @"picture",
                                    nil];
     
     // Make the request
@@ -231,7 +236,23 @@
                           completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
                               if (!error) {
                                   // Link posted successfully to Facebook
-                                  NSLog(@"result: %@", result);
+                        
+                                  alertView.title = @"Postado no Facebook com Sucesso!";
+                                  alertView.delegate = self;
+                                  alertView.titleLabel.textColor = [UIColor cloudsColor];
+                                  alertView.titleLabel.font = [UIFont boldFlatFontOfSize:16];
+                                  alertView.messageLabel.textColor = [UIColor cloudsColor];
+                                  alertView.messageLabel.font = [UIFont flatFontOfSize:14];
+                                  alertView.backgroundOverlay.backgroundColor = [[UIColor cloudsColor] colorWithAlphaComponent:0.8];
+                                  alertView.alertContainer.backgroundColor = RGB(51, 99, 172);
+                                  alertView.defaultButtonColor = [UIColor cloudsColor];
+                                  alertView.defaultButtonShadowColor = [UIColor asbestosColor];
+                                  alertView.defaultButtonFont = [UIFont boldFlatFontOfSize:16];
+                                  alertView.defaultButtonTitleColor = [UIColor asbestosColor];
+                                  
+                                  [alertView show];
+                                  
+                                  NSLog(@"resultado: %@", result);
                               } else {
                                   // An error occurred, we need to handle the error
                                   // See: https://developers.facebook.com/docs/ios/errors
@@ -302,6 +323,7 @@
                                     if (!error) {
                                         // Status update posted successfully to Facebook
                                         NSLog(@"result: %@", result);
+                        
                                     } else {
                                         // An error occurred, we need to handle the error
                                         // See: https://developers.facebook.com/docs/ios/errors
@@ -313,6 +335,11 @@
 
 //------------------------------------
 
+- (void)viewDidLoad{
+    o = [[OnibusVC alloc]init];
+    alertView = [[FUIAlertView alloc] initWithTitle:@"Postado no Facebook com Sucesso!" message:@"" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    [o viewDidLoad];
+}
 
 
 @end

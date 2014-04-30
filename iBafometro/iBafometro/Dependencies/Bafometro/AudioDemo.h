@@ -1,8 +1,8 @@
 //
-//  Bafometro.h
-//  iBafometro
+//  AudioDemo.h
+//  FSK-Demo
 //
-//  Created by EZEQUIEL FRANCA DOS SANTOS on 16/04/14.
+//  Created by Ezequiel Franca dos Santos on 20/04/14.
 //  Copyright (c) 2014 Ezequiel Franca dos Santos. All rights reserved.
 //
 
@@ -14,13 +14,14 @@
 
 @class AudioSignalAnalyzer, FSKSerialGenerator;
 
-@interface Bafometro : NSObject <AVAudioSessionDelegate, CharReceiver>
+@interface AudioDemo : NSObject <AVAudioSessionDelegate, CharReceiver>{
+    char local_input;
+}
 @property (strong, nonatomic) AudioSignalAnalyzer* analyzer;
 @property (strong, nonatomic) FSKSerialGenerator* generator;
 
 + (id)shared;
 
+- (void)signalArduino:(BOOL)on;
 - (char)returnChar;
-
-- (void)setLED:(BOOL)on;
 @end

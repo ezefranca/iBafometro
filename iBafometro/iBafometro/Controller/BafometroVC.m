@@ -8,7 +8,7 @@
 
 
 #import "BafometroVC.h"
-#import "Bafometro.h"
+#import "AudioDemo.h"
 #import "FSKSerialGenerator.h"
 #import "PNChart.h"
 #import "MyScene.h"
@@ -68,16 +68,16 @@
     
     self.annotatedGauge = [[MSAnnotatedGauge alloc] initWithFrame:CGRectMake(0, 0, 320, 250)];
     self.annotatedGauge.minValue = 0;
-    self.annotatedGauge.maxValue = 100;
+    self.annotatedGauge.maxValue = 10;
     self.annotatedGauge.titleLabel.text = @"Bafometris";
     self.annotatedGauge.titleLabel.textColor = RGB(255, 255, 255);
     self.annotatedGauge.startRangeLabel.text = @"0";
     self.annotatedGauge.startRangeLabel.textColor = RGB(255, 255, 255);
-    self.annotatedGauge.endRangeLabel.text = @"100";
+    self.annotatedGauge.endRangeLabel.text = @"10";
     self.annotatedGauge.endRangeLabel.textColor = RGB(255, 255, 255);
     //self.annotatedGauge.fillArcFillColor = [UIColor colorWithRed:.41 green:.76 blue:.73 alpha:1];
     //self.annotatedGauge.fillArcStrokeColor = [UIColor colorWithRed:.41 green:.76 blue:.73 alpha:1];
-    self.annotatedGauge.value = 30;
+    self.annotatedGauge.value = 0;
     self.annotatedGauge.backgroundColor = RGB(51, 99, 172);
     [self.view addSubview:self.annotatedGauge];
     
@@ -119,8 +119,11 @@
 #pragma mark - Metodos Arduino (leitura do sensor)
 
 - (BOOL)lerDadosArduino{
-    for (int i =0; i < 15; i++)
-    [[[Bafometro shared] generator] writeByte:0x00];
+    //for (int i =0; i < 15; i++)
+    [[[AudioDemo shared] generator] writeByte:33];
+    char s = [[AudioDemo shared] returnChar];
+    NSLog(@"Arduino %d", s);
+    self.annotatedGauge.value = s;
     return YES;
 }
 
@@ -148,7 +151,7 @@
     alertView.messageLabel.textColor = [UIColor cloudsColor];
     alertView.messageLabel.font = [UIFont flatFontOfSize:14];
     alertView.backgroundOverlay.backgroundColor = [[UIColor cloudsColor] colorWithAlphaComponent:0.8];
-    alertView.alertContainer.backgroundColor = [UIColor turquoiseColor];
+    alertView.alertContainer.backgroundColor = RGB(51, 99, 172);
     alertView.defaultButtonColor = [UIColor cloudsColor];
     alertView.defaultButtonShadowColor = [UIColor asbestosColor];
     alertView.defaultButtonFont = [UIFont boldFlatFontOfSize:16];
@@ -158,23 +161,18 @@
 }
 
 - (IBAction)buttonBafometer:(id)sender {
-    [[[Bafometro shared] generator] writeByte:0xFF];
+    [[[AudioDemo shared] generator] writeByte:0xFF];
 }
 
 #pragma mark - Metodos Clique no circulo
 
--(void)userClickedOnLineKeyPoint:(CGPoint)point lineIndex:(NSInteger)lineIndex andPointIndex:(NSInteger)pointIndex{
-    NSLog(@"Click Key on line %f, %f line index is %d and point index is %d",point.x, point.y,(int)lineIndex, (int)pointIndex);
-}
-
--(void)userClickedOnLinePoint:(CGPoint)point lineIndex:(NSInteger)lineIndex{
-    NSLog(@"Click on line %f, %f, line index is %d",point.x, point.y, (int)lineIndex);
-}
 
 #pragma mark - Metodos AlertView
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 0) {
+        for (int i =0; i < 15; i++)
+        [[[AudioDemo shared] generator] writeByte:0x00];
         NSLog(@"Cancelou");
         [self.timer invalidate];
         self.timer = nil;
@@ -186,7 +184,7 @@
         alertView.messageLabel.textColor = [UIColor cloudsColor];
         alertView.messageLabel.font = [UIFont flatFontOfSize:14];
         alertView.backgroundOverlay.backgroundColor = [[UIColor cloudsColor] colorWithAlphaComponent:0.8];
-        alertView.alertContainer.backgroundColor = [UIColor turquoiseColor];
+        alertView.alertContainer.backgroundColor = RGB(51, 99, 172);
         alertView.defaultButtonColor = [UIColor cloudsColor];
         alertView.defaultButtonShadowColor = [UIColor asbestosColor];
         alertView.defaultButtonFont = [UIFont boldFlatFontOfSize:16];
@@ -196,6 +194,4 @@
     }
     
 }
-
-
 @end

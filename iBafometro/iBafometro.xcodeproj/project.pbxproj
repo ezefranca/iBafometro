@@ -66,7 +66,6 @@
 		F74460941901E7F40078A82E /* MSRangeGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = F744608C1901E7F40078A82E /* MSRangeGauge.m */; };
 		F74460951901E7F40078A82E /* MSSimpleGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = F744608E1901E7F40078A82E /* MSSimpleGauge.m */; };
 		F74460991901E8070078A82E /* PontosOnibus.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460981901E8070078A82E /* PontosOnibus.m */; };
-		F744609D1901E8140078A82E /* Bafometro.m in Sources */ = {isa = PBXBuildFile; fileRef = F744609C1901E8140078A82E /* Bafometro.m */; };
 		F744609F1901EF5A0078A82E /* mussum_luhan.png in Resources */ = {isa = PBXBuildFile; fileRef = F744609E1901EF5A0078A82E /* mussum_luhan.png */; };
 		F74460CF1901FEE90078A82E /* FUIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460A51901FEE90078A82E /* FUIAlertView.m */; };
 		F74460D01901FEE90078A82E /* FUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F74460A71901FEE90078A82E /* FUIButton.m */; };
@@ -132,6 +131,8 @@
 		F7EFB603190F2DBB0054CDA5 /* taxiz.png in Resources */ = {isa = PBXBuildFile; fileRef = F7EFB602190F2DBB0054CDA5 /* taxiz.png */; };
 		F7EFB605190F34830054CDA5 /* bafometro.png in Resources */ = {isa = PBXBuildFile; fileRef = F7EFB604190F34830054CDA5 /* bafometro.png */; };
 		F7EFB607190FE24A0054CDA5 /* amizade.png in Resources */ = {isa = PBXBuildFile; fileRef = F7EFB606190FE2490054CDA5 /* amizade.png */; };
+		F7F974061910BF9C0076C953 /* AudioDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F974051910BF9C0076C953 /* AudioDemo.m */; };
+		F7F97409191115000076C953 /* webVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F97408191115000076C953 /* webVC.m */; };
 		F7FE5EAF190633FB00B1DDF1 /* id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = F7FE5EAB190633FB00B1DDF1 /* id-card.png */; };
 		F7FE5EB0190633FB00B1DDF1 /* map-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = F7FE5EAC190633FB00B1DDF1 /* map-pin.png */; };
 		F7FE5EB1190633FB00B1DDF1 /* spiral.png in Resources */ = {isa = PBXBuildFile; fileRef = F7FE5EAD190633FB00B1DDF1 /* spiral.png */; };
@@ -237,8 +238,6 @@
 		F744608F1901E7F40078A82E /* MSSimpleGaugeSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSimpleGaugeSubclass.h; sourceTree = "<group>"; };
 		F74460971901E8070078A82E /* PontosOnibus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PontosOnibus.h; sourceTree = "<group>"; };
 		F74460981901E8070078A82E /* PontosOnibus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PontosOnibus.m; sourceTree = "<group>"; };
-		F744609B1901E8140078A82E /* Bafometro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bafometro.h; sourceTree = "<group>"; };
-		F744609C1901E8140078A82E /* Bafometro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bafometro.m; sourceTree = "<group>"; };
 		F744609E1901EF5A0078A82E /* mussum_luhan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mussum_luhan.png; sourceTree = "<group>"; };
 		F74460A31901FEE90078A82E /* FlatUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlatUIKit.h; sourceTree = "<group>"; };
 		F74460A41901FEE90078A82E /* FUIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIAlertView.h; sourceTree = "<group>"; };
@@ -343,6 +342,10 @@
 		F7EFB602190F2DBB0054CDA5 /* taxiz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taxiz.png; sourceTree = "<group>"; };
 		F7EFB604190F34830054CDA5 /* bafometro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bafometro.png; sourceTree = "<group>"; };
 		F7EFB606190FE2490054CDA5 /* amizade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amizade.png; sourceTree = "<group>"; };
+		F7F974041910BF9C0076C953 /* AudioDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDemo.h; sourceTree = "<group>"; };
+		F7F974051910BF9C0076C953 /* AudioDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioDemo.m; sourceTree = "<group>"; };
+		F7F97407191115000076C953 /* webVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webVC.h; sourceTree = "<group>"; };
+		F7F97408191115000076C953 /* webVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webVC.m; sourceTree = "<group>"; };
 		F7FE5EAB190633FB00B1DDF1 /* id-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "id-card.png"; sourceTree = "<group>"; };
 		F7FE5EAC190633FB00B1DDF1 /* map-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-pin.png"; sourceTree = "<group>"; };
 		F7FE5EAD190633FB00B1DDF1 /* spiral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spiral.png; sourceTree = "<group>"; };
@@ -409,6 +412,8 @@
 				25FCA7681900693A00C0AA85 /* ViewController.h */,
 				25FCA7691900693A00C0AA85 /* ViewController.m */,
 				25FCA75C1900693A00C0AA85 /* Model.xcdatamodeld */,
+				F7F97407191115000076C953 /* webVC.h */,
+				F7F97408191115000076C953 /* webVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -610,8 +615,8 @@
 		F744609A1901E8140078A82E /* Bafometro */ = {
 			isa = PBXGroup;
 			children = (
-				F744609B1901E8140078A82E /* Bafometro.h */,
-				F744609C1901E8140078A82E /* Bafometro.m */,
+				F7F974041910BF9C0076C953 /* AudioDemo.h */,
+				F7F974051910BF9C0076C953 /* AudioDemo.m */,
 			);
 			path = Bafometro;
 			sourceTree = "<group>";
@@ -961,7 +966,6 @@
 				25FCA7751900693A00C0AA85 /* TaxiVC.m in Sources */,
 				F7AF816718FA264E0078C410 /* PNChartLabel.m in Sources */,
 				F74460D81901FEE90078A82E /* UIFont+FlatUI.m in Sources */,
-				F744609D1901E8140078A82E /* Bafometro.m in Sources */,
 				F74460D71901FEE90078A82E /* UIColor+FlatUI.m in Sources */,
 				F74460D11901FEE90078A82E /* FUICellBackgroundView.m in Sources */,
 				25FCA76B1900693A00C0AA85 /* BafometroVC.m in Sources */,
@@ -1000,6 +1004,7 @@
 				25FCA7731900693A00C0AA85 /* SettingsVC.m in Sources */,
 				25FCA7701900693A00C0AA85 /* Model.xcdatamodeld in Sources */,
 				F74460D51901FEE90078A82E /* FUITextField.m in Sources */,
+				F7F97409191115000076C953 /* webVC.m in Sources */,
 				F7AF816818FA264E0078C410 /* PNCircleChart.m in Sources */,
 				F74460931901E7F40078A82E /* MSNeedleView.m in Sources */,
 				25FCA76C1900693A00C0AA85 /* LoginVC.m in Sources */,
@@ -1007,6 +1012,7 @@
 				F7AF818218FA2A4D0078C410 /* AudioQueueObject.m in Sources */,
 				F74460D91901FEE90078A82E /* UIImage+FlatUI.m in Sources */,
 				F70D6E9A18F8A99000238937 /* main.m in Sources */,
+				F7F974061910BF9C0076C953 /* AudioDemo.m in Sources */,
 				F74460921901E7F40078A82E /* MSGradientArcLayer.m in Sources */,
 				25FCA7721900693A00C0AA85 /* OnibusVC.m in Sources */,
 				25FCA7A51900739800C0AA85 /* DTProgressStatus.m in Sources */,

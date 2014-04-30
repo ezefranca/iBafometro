@@ -7,8 +7,11 @@
 //
 
 #import "SocialVC.h"
+#import "OnibusVC.h"
 
-@interface SocialVC ()
+@interface SocialVC (){
+    OnibusVC *o;
+}
 
 @end
 
@@ -28,6 +31,8 @@
 {
     [super viewDidLoad];
     //Facebook
+    
+        o = [[OnibusVC alloc]init];
     
     FBLoginView *loginview = [[FBLoginView alloc] init];
     loginview.frame = CGRectOffset(loginview.frame, self.view.bounds.size.width/4, self.view.bounds.size.height/2);
@@ -478,6 +483,9 @@
     
     
     // Check if the Facebook app is installed and we can present the share dialog
+    NSString *googleMapsURL = [NSString stringWithFormat:@"https://www.google.com.br/maps/place/@%f,%f,15z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0", o.latitude, o.longitude];
+    
+    
     FBShareDialogParams *params = [[FBShareDialogParams alloc] init];
     params.link = [NSURL URLWithString:@"https://www.ezefranca.com"];
     params.name = @"Me ajude, estou bebedo!";
@@ -512,12 +520,14 @@
         // FALLBACK: publish just a link using the Feed dialog
         
         // Put together the dialog parameters
+ 
+        
         NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                       @"Preciso de uma Carona!", @"name",
-                                       @"iBafometro ajudando você a chegar seguro em casa.", @"caption",
-                                       @"Acabei bebendo um pouco, se você estiver por perto, preciso de uma carona.", @"description",
-                                       @"http://www.ezefranca.com", @"link",
-                                       @"http://www.flaticon.com/png/256/20699.png", @"picture",
+                                       @"Me ajude - Carona ou me busque", @"name",
+                                       @"Acabei bebendo um pouco e preciso de ajuda!.", @"caption",
+                                       @"Clique no link e veja minha localização!", @"description",
+                                       @"%@",googleMapsURL, @"link",
+                                       @"%@",googleMapsURL, @"picture",
                                        nil];
         
         // Show the feed dialog
@@ -592,5 +602,6 @@
     
     
 }
+
 
 @end
