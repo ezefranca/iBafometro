@@ -13,9 +13,12 @@ Development of a breathalyzer with arduino interfaced with iOS communication usi
 
 The inteface was developed in portuguese, and as a way to further integration with the user, the title of app, was made in the style of the character Mussum. If you are not a portuguese speaker, search about your job [from here](http://en.wikipedia.org/wiki/Mussum). 
 
+Bus
+=====
+todo- Sptrans description
 
 Arduino
-
+======
 ======
 ###BreathAnalyzer with Arduino and iOS
 ![](https://raw.githubusercontent.com/ezefranca/iBafometro/master/iBafometro/arduino/bafometro.png)
