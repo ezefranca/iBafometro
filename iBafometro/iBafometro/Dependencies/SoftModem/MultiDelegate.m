@@ -52,6 +52,6 @@
 	}
 }
 //- (void) receivedChar:(char)input{
-//    
+//    NSLog(@"rato");
 //}
 @end

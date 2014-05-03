@@ -35,7 +35,7 @@
 #import "UIPopoverController+FlatUI.h"
 
 
-@interface BafometroVC : UIViewController <AVAudioSessionDelegate, UIPopoverControllerDelegate, UIActionSheetDelegate, FUIAlertViewDelegate, UIAlertViewDelegate>
+@interface BafometroVC : UIViewController <AVAudioSessionDelegate, UIPopoverControllerDelegate, UIActionSheetDelegate, FUIAlertViewDelegate, UIAlertViewDelegate, CharReceiver>
 - (IBAction)apagar:(id)sender;
 - (IBAction)buttonBafometer:(id)sender;
 

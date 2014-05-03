@@ -68,12 +68,12 @@
     
     self.annotatedGauge = [[MSAnnotatedGauge alloc] initWithFrame:CGRectMake(0, 0, 320, 250)];
     self.annotatedGauge.minValue = 0;
-    self.annotatedGauge.maxValue = 10;
+    self.annotatedGauge.maxValue = 1024;
     self.annotatedGauge.titleLabel.text = @"Bafometris";
     self.annotatedGauge.titleLabel.textColor = RGB(255, 255, 255);
     self.annotatedGauge.startRangeLabel.text = @"0";
     self.annotatedGauge.startRangeLabel.textColor = RGB(255, 255, 255);
-    self.annotatedGauge.endRangeLabel.text = @"10";
+    self.annotatedGauge.endRangeLabel.text = @"1024";
     self.annotatedGauge.endRangeLabel.textColor = RGB(255, 255, 255);
     //self.annotatedGauge.fillArcFillColor = [UIColor colorWithRed:.41 green:.76 blue:.73 alpha:1];
     //self.annotatedGauge.fillArcStrokeColor = [UIColor colorWithRed:.41 green:.76 blue:.73 alpha:1];
@@ -123,7 +123,7 @@
     [[[AudioDemo shared] generator] writeByte:33];
     char s = [[AudioDemo shared] returnChar];
     NSLog(@"Arduino %d", s);
-    self.annotatedGauge.value = s;
+    self.annotatedGauge.value = (int)s;
     return YES;
 }
 

@@ -94,10 +94,16 @@
 }
 
 - (void)receivedChar:(char)input {
-    self->local_input = input;
-    [self returnChar];
+    NSLog(@"rato");
+    //sellocal_input = input;
     NSLog(@"Received: %d  %d", input, local_input);
+    [self returnChar];
 }
+
+//- (void) receivedChar:(char)input{
+//    
+//}
+
 
 #pragma mark return received char
 
